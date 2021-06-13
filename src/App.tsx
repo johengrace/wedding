@@ -1,11 +1,21 @@
-import React, { FC } from 'react';
 import './App.css';
-import FancyButton from './component/FancyButton';
-import RootPage from './pages/root';
-import AppRoutes from "./routes"
+import { ParallaxProvider } from 'react-scroll-parallax';
+import { ParallaxImage, ParallaxLayout } from './component/ParallaxScroll';
+import NavBar from './component/Navigation';
+import Layout, { Content, Header } from 'antd/lib/layout/layout';
 
-const App: FC = () => (
-    <RootPage />
-);
+const App = () => {
+    return (
+        <Layout>
+            <Header>
+                <NavBar />
+            </Header>
+            <Content>
+            </Content>
+        </Layout>
+        
+    );
+}
+
 
 export default App;
