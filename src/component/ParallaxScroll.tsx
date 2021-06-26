@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Parallax, ParallaxBanner, ParallaxProvider } from "react-scroll-parallax";
-import Home from "../pages/Home";
+import Main from "../pages/Main";
 import FancyButton from "./FancyButton";
 
 const ParallaxScroll = () => {
@@ -21,7 +21,7 @@ const ParallaxImage = () => (
 const ParallaxLayout = () => (
     <ParallaxProvider>
         <ParallaxImage />
-        <Home />
+        <Main />
     </ParallaxProvider>
     
 

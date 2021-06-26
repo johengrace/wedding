@@ -2,7 +2,7 @@ import './App.css';
 import NavBar from './component/Navigation';
 import { Route, Switch } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Home from './pages/Home';
+import Main from './pages/Main';
 import ScrollToTop from './component/ScrollToTop';
 
 const App = () => {
@@ -12,8 +12,8 @@ const App = () => {
             <Switch>
                 <div className="App">
                 <NavBar />
-                <Route path="/" exact component={Home} />
-                <Route path="/wedding" exact component={Home} />
+                <Route path="/" exact component={Main} />
+                <Route path="/wedding" exact component={Main} />
                 {/* <Route path="/story" component={Story} />
                 <Route path="/rsvp" component={Rsvp} /> */}
                 </div>

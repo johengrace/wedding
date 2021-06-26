@@ -7,7 +7,7 @@ const NavBar = () => {
         <div className="menu">
         <Menu mode="horizontal">
             <Menu.Item key="home">
-                <ScrollLink to="header" smooth={true}>
+                <ScrollLink to="home" smooth={true}>
                     Home
                 </ScrollLink>
             </Menu.Item>
