@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Header from "./Header";
 import Rsvp from "./Rsvp";
 import Story from "./Story";
+import WEvent from "./WeddingEvent";
 
 const Home = () => {
     return(
@@ -12,6 +13,7 @@ const Home = () => {
             animate={{ opacity: 1 }}
         >
             <Header/>
+            <WEvent/>
             <Story/>
             <Rsvp />
         </motion.div>

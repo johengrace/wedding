@@ -11,8 +11,10 @@ const NavBar = () => {
                     Home
                 </ScrollLink>
             </Menu.Item>
-            <Menu.Item key="rsvp">
+            <Menu.Item key="event">
+                <ScrollLink to="event" smooth={true}>
                     Event
+                </ScrollLink>
             </Menu.Item>
             <Menu.Item key="story">
                 <ScrollLink to="story"  smooth={true}>

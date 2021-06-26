@@ -13,6 +13,7 @@ const App = () => {
                 <div className="App">
                 <NavBar />
                 <Route path="/" exact component={Home} />
+                <Route path="/wedding" exact component={Home} />
                 {/* <Route path="/story" component={Story} />
                 <Route path="/rsvp" component={Rsvp} /> */}
                 </div>
