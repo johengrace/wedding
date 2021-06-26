@@ -72,7 +72,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 40px;
-  background-color: cadetblue;
+  background-color: #8bbbd9;
 }
 
 .event{
@@ -85,7 +85,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 40px;
-  background-color: pink;
+  background-color: #bf9b9b;
 }
 
 .story {
@@ -98,7 +98,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 40px;
-  background-color: yellow;
+  background-color: #8bbbd9;
 }
 
 .rsvp {
@@ -111,7 +111,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 40px;
-  background-color: teal;
+  background-color: #bf9b9b;
 }
 
 .s-heading h1 {
