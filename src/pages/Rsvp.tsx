@@ -1,6 +1,11 @@
 const Rsvp = () => {
     return(
-        <h1>Rsvp content</h1>
+        <div className="rsvp">
+            <div className="s-heading">
+                <h1>RSVP</h1>
+                <p></p>
+            </div>
+        </div>
     )
 }
 

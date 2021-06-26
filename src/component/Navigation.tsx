@@ -1,37 +1,34 @@
-import { Menu, Switch } from "antd";
-import { useState } from "react";
+import { Menu } from "antd";
 import 'antd/dist/antd.css';
-import { Link, Route } from "react-router-dom";
-import { BrowserRouter as Router } from 'react-router-dom';
-import Home from "../pages/Home";
-import Story from "../pages/Story";
-
+import { Link as ScrollLink } from "react-scroll";
 
 const NavBar = () => {
-    const [state, setState] = useState("home");
-    
-
-    function handleClick(value:string) {
-        setState(value);
-    }
-
     return(
-        <Menu mode="horizontal" className="top-nav">
+        <div className="menu">
+        <Menu mode="horizontal">
             <Menu.Item key="home">
-                <Link to="/home"></Link>
-                Home
-            </Menu.Item>
-            <Menu.Item key="story">
-                <Link to="/our-story"></Link>
-                Our Story
+                <ScrollLink to="header" smooth={true}>
+                    Home
+                </ScrollLink>
             </Menu.Item>
             <Menu.Item key="rsvp">
-                <Link to="/rsvp"></Link>
-                RSVP
+                    Event
             </Menu.Item>
+            <Menu.Item key="story">
+                <ScrollLink to="story"  smooth={true}>
+                    Our Story
+                </ScrollLink>
+            </Menu.Item>
+            <Menu.Item key="rsvp">
+                <ScrollLink to="rsvp"  smooth={true}>
+                    RSVP
+                </ScrollLink>
+            </Menu.Item>
+            
         </Menu>
+        </div>
+        
     )
 }
-
 
 export default NavBar;

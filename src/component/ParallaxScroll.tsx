@@ -12,7 +12,7 @@ const ParallaxScroll = () => {
 
 
 const ParallaxImage = () => (
-    <Parallax className="custom-class" y={[-20, 20]} tagOuter="figure">
+    <Parallax className="custom-class" y={[-50, 20]} tagOuter="figure">
         <img src="https://live.staticflickr.com/65535/46916286155_da0e275e6a_o.png" />
     </Parallax>
 );

@@ -1,4 +1,5 @@
 @import '~antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 .App {
   text-align: center;
@@ -40,9 +41,83 @@
 }
 
 .top-nav {
-  position: "relative";
-  top: 0;
-  background: "rgba(255, 255, 255, 0.5)";
-  width: "350";
-  height: "85px";
+  position: 'relative';
+  display: 'float';
+  justifyContent: 'center';
 }
+
+.home {
+  margin-top: 300px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.ant-menu-root {
+  display: inline-block;
+  width: 326px;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  background-color: cadetblue;
+}
+
+.story {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  background-color: yellow;
+}
+
+.rsvp {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  background-color: teal;
+}
+
+.s-heading h1 {
+  color: var(--highlight);
+  font-size: 3rem;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Playfair" !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
+}
+.s-heading p {
+  color: var(--highlight);
+  font-size: 1rem;
+  margin: 0px;
+  padding: 0px;
+}
+.s-heading {
+  text-align: center;
+  margin: 20px 0px;
+}
+
