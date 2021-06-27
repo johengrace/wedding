@@ -1,14 +1,14 @@
 import { useEffect, useRef } from "react";
 
-const useInterval = (callback, delay) => {
-  const savedCallback = useRef();
+const useInterval = (callback:any, delay:any) => {
+  const savedCallback = useRef(callback);
 
   useEffect(() => {
     savedCallback.current = callback;
   }, [callback]);
 
   useEffect(() => {
-    const handler = (...args) => savedCallback.current(...args);
+    const handler = (...args:any) => savedCallback.current(...args);
 
     if (delay !== null) {
       const id = setInterval(handler, delay);

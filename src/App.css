@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Serendipity+Wide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
 @font-face {
   font-family: Bluehonest;
@@ -62,6 +63,7 @@
   top: 0;
   width: 100%;
   background-color: white;
+  z-index: 99;
 }
 
 .ant-menu-root {
@@ -141,10 +143,17 @@
 .name {
   font-family: 'Bluehonest', cursive;
   font-weight: 400!important;
-  font-size: 36px;
+  font-size: 3.6vw;
   position: absolute;
-  top: 60px;
+  top: 107px;
   letter-spacing: 1px;
+}
+
+.prename {
+  position: absolute;
+  top: 70px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.5vw;
 }
 
 .imgContainer{
@@ -157,6 +166,13 @@
 
 .imgContainer img {
   position: relative;
-  max-height: 100%;
-  max-width: 100%;
+}
+
+.desktop.imgContainer {display:block;}
+.mobile.imgContainer {display:none}
+
+@media all and (max-width: 640px) {
+  .desktop.imgContainer {display: none;}
+  .mobile.imgContainer {display: block;}
+  .name {top: 90px;}
 }

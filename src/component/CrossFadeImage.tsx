@@ -28,12 +28,15 @@ type ImageProps = {
     alt?: string;
     transitionDuration?: number;
     curve?: string;
+    className: string;
   };
 
 const CrossFadeImage = (props: ImageProps) => {
-    const { src, alt, transitionDuration = 0.35, curve = "ease-in-out" } = props;
+    const { src, alt, transitionDuration = 0.35, curve = "ease" , className} = props;
     const oldSrc = usePrevious(src);
     const [topSrc, setTopSrc] = React.useState<string>(src);
+    const [bottomSrc, setBottomSrc] = React.useState<string>("");
+    const [bottomOpacity, setBottomOpacity] = React.useState(0);
     const [display, setDisplay] = React.useState(false);
     const [raf, resetRaf] = useRequestAnimationFrame();
 
@@ -41,31 +44,57 @@ const CrossFadeImage = (props: ImageProps) => {
         if (src !== oldSrc) {
           resetRaf();
           setTopSrc("");
+          setBottomSrc("");
     
           raf(() => {
             setTopSrc(src);
+            setBottomSrc(oldSrc!);
+            setBottomOpacity(99);
+    
+            raf(() => {
+              setBottomOpacity(0);
+            });
           });
         }
-      });
+    });
     
     return(
         <div
-            className="imgContainer"
+            className={className + " imgContainer"}
             style={{
                 position: "relative",
                 height: "100%"
             }}
         >
-            <img
-                style={{
-                    position: "relative",
-                    opacity: display ? "100%" : 0,
-                    transition: `opacity ${transitionDuration}s ${curve}`
-                }}
-                onLoad={() => setDisplay(true)}
-                src={topSrc}
-                alt={alt}
-            />
+            {topSrc && (
+                <img
+                    style={{
+                        position: "absolute",
+                        opacity: display ? "100%" : 0,
+                        transition: `opacity ${transitionDuration}s ${curve}`,
+                        left:"0px",
+                        width:"100%",
+                        height:"auto",
+                    }}
+                    onLoad={() => setDisplay(true)}
+                    src={topSrc}
+                    alt={alt}
+                />
+            )}
+            {bottomSrc && (
+                <img
+                    style={{
+                        position: "absolute",
+                        opacity: bottomOpacity + "%",
+                        transition: `opacity ${transitionDuration}s ${curve}`,
+                        left:"0px",
+                        width:"100%",
+                        height:"auto",
+                    }}
+                    src={bottomSrc}
+                    alt={alt}
+                />
+            )}
         </div>
     );
 };
