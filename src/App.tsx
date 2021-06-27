@@ -1,4 +1,5 @@
 import './App.css';
+import { hot } from 'react-hot-loader/root';
 import NavBar from './component/Navigation';
 import { Route, Switch } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -31,4 +32,4 @@ const App = () => {
 }
 
 
-export default App;
+export default hot(App);
