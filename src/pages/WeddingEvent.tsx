@@ -16,7 +16,7 @@ const WEvent = () => {
                         Download Booklet
                     </Button>
                     <br/> <br/>
-                    <Button type="primary" block>Add To Calendar</Button>
+                    <Button block>Add To Calendar</Button>
                 </Col>
             </Row>
         </div>
