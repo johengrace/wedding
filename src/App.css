@@ -86,13 +86,17 @@
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Cookie", cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 40px;
   background-color: #bf9b9b;
+}
+
+.weddingEvent {
+  height: 100%;
+  width: 100%;
 }
 
 .story {
@@ -137,7 +141,7 @@
 }
 .s-heading {
   text-align: center;
-  margin: 20px 0px;
+  margin: 3px 0px;
 }
 
 .name {
@@ -168,6 +172,17 @@
   position: relative;
 }
 
+.youtubeVideo{
+  width: 100%;
+  height: 100%;
+  font-family:'Montserrat', sans-serif;
+}
+
+.invitation {
+  width: 100%;
+  height:100%;
+}
+
 .desktop.imgContainer {display:block;}
 .mobile.imgContainer {display:none}
 
@@ -176,3 +191,5 @@
   .mobile.imgContainer {display: block;}
   .name {top: 90px;}
 }
+
+
