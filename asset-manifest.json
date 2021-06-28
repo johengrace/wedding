@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/wedding/static/css/main.82bbff50.chunk.css",
-    "main.js": "/wedding/static/js/main.f75a3081.chunk.js",
-    "main.js.map": "/wedding/static/js/main.f75a3081.chunk.js.map",
-    "runtime-main.js": "/wedding/static/js/runtime-main.046793f7.js",
-    "runtime-main.js.map": "/wedding/static/js/runtime-main.046793f7.js.map",
-    "static/css/2.8c5372c1.chunk.css": "/wedding/static/css/2.8c5372c1.chunk.css",
-    "static/js/2.0f371d00.chunk.js": "/wedding/static/js/2.0f371d00.chunk.js",
-    "static/js/2.0f371d00.chunk.js.map": "/wedding/static/js/2.0f371d00.chunk.js.map",
-    "static/js/3.4adc4b40.chunk.js": "/wedding/static/js/3.4adc4b40.chunk.js",
-    "static/js/3.4adc4b40.chunk.js.map": "/wedding/static/js/3.4adc4b40.chunk.js.map",
-    "index.html": "/wedding/index.html",
-    "static/css/2.8c5372c1.chunk.css.map": "/wedding/static/css/2.8c5372c1.chunk.css.map",
-    "static/css/main.82bbff50.chunk.css.map": "/wedding/static/css/main.82bbff50.chunk.css.map",
-    "static/js/2.0f371d00.chunk.js.LICENSE.txt": "/wedding/static/js/2.0f371d00.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/wedding/static/media/Bluehonest Demo Version.f88b075f.otf",
-    "static/media/cover1.dc505c3e.jpg": "/wedding/static/media/cover1.dc505c3e.jpg",
-    "static/media/cover2.99af68b6.jpg": "/wedding/static/media/cover2.99af68b6.jpg",
-    "static/media/vertical1.9cb9081e.jpg": "/wedding/static/media/vertical1.9cb9081e.jpg"
+    "main.css": "/static/css/main.ec2f5985.chunk.css",
+    "main.js": "/static/js/main.7aed5320.chunk.js",
+    "main.js.map": "/static/js/main.7aed5320.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.04c7381e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.04c7381e.js.map",
+    "static/css/2.8c5372c1.chunk.css": "/static/css/2.8c5372c1.chunk.css",
+    "static/js/2.1d526ed5.chunk.js": "/static/js/2.1d526ed5.chunk.js",
+    "static/js/2.1d526ed5.chunk.js.map": "/static/js/2.1d526ed5.chunk.js.map",
+    "static/js/3.a153f635.chunk.js": "/static/js/3.a153f635.chunk.js",
+    "static/js/3.a153f635.chunk.js.map": "/static/js/3.a153f635.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.8c5372c1.chunk.css.map": "/static/css/2.8c5372c1.chunk.css.map",
+    "static/css/main.ec2f5985.chunk.css.map": "/static/css/main.ec2f5985.chunk.css.map",
+    "static/js/2.1d526ed5.chunk.js.LICENSE.txt": "/static/js/2.1d526ed5.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/Bluehonest Demo Version.f88b075f.otf",
+    "static/media/cover1.dc505c3e.jpg": "/static/media/cover1.dc505c3e.jpg",
+    "static/media/cover2.99af68b6.jpg": "/static/media/cover2.99af68b6.jpg",
+    "static/media/vertical1.9cb9081e.jpg": "/static/media/vertical1.9cb9081e.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.046793f7.js",
+    "static/js/runtime-main.04c7381e.js",
     "static/css/2.8c5372c1.chunk.css",
-    "static/js/2.0f371d00.chunk.js",
-    "static/css/main.82bbff50.chunk.css",
-    "static/js/main.f75a3081.chunk.js"
+    "static/js/2.1d526ed5.chunk.js",
+    "static/css/main.ec2f5985.chunk.css",
+    "static/js/main.7aed5320.chunk.js"
   ]
 }
