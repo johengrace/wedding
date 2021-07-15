@@ -42,32 +42,12 @@ const Home = () => {
       className="home"
     >
         <div className="home">
-            <div className="prename">
-                <motion.h1
-                    animate={{
-                        opacity: 1,
-                        y: 0
-                    }}
-                    transition={{ ease: "easeInOut", delay: 1, duration: 0.5 }}
-                    initial={{ opacity: 0, y: 20 }}
-                >
-                    The Wedding of
-                </motion.h1>
+            <div className="home-content">
+                <h4 className="prename">We're Getting Married!</h4>  
+                <h2 className="name">Joshua & Grace</h2>
+                <h4 className="weddingDate">02.10.21</h4>
             </div>
 
-            <div className="name">
-            <motion.h1
-                animate={{
-                    opacity: 1,
-                    y: 0
-                }}
-                transition={{ ease: "easeInOut", delay: 1, duration: 0.5 }}
-                initial={{ opacity: 0, y: 20 }}
-            >
-                Joshua & Grace
-            </motion.h1>
-            </div>
-            
             {/* Cover picture will be here */}
             <CrossFadeImage
                 src={image}
@@ -83,7 +63,7 @@ const Home = () => {
                 curve="ease-in-out"
                 className="mobile"
             />
-            </div>
+        </div>
     </motion.div>
     )
 }
