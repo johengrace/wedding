@@ -63,12 +63,22 @@
   top: 0;
   width: 100%;
   background-color: white;
+  transition: background-color 200ms linear;
   z-index: 99;
+}
+
+.rsvp-button {
+  position:absolute;
+  top:0;
+  right:0;
+  margin-top: 7px;
+  margin-right: 80px;
 }
 
 .ant-menu-root {
   display: inline-block;
-  width: 326px;
+  width: 100%;
+  text-align: center;
 }
 
 .home {
@@ -144,21 +154,41 @@
   margin: 3px 0px;
 }
 
-.name {
-  font-family: 'Bluehonest', cursive;
-  font-weight: 400!important;
-  font-size: 3.6vw;
-  position: absolute;
-  top: 107px;
-  letter-spacing: 1px;
-}
-
 .prename {
   position: absolute;
   top: 70px;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 1.5vw;
 }
+
+.name {
+  position: absolute;
+}
+
+.name h1 {
+  font-family: 'Bluehonest', cursive;
+  font-weight: 400!important;
+  font-size: 5vw;
+  letter-spacing: 1px;
+  position: relative;
+  margin-top: -176px;
+}
+
+.name h2 {
+  position: absolute;
+  top: 70px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.5vw;
+}
+
+.postname {
+  position: absolute;
+  top: 240px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.8vw;
+}
+
+
 
 .imgContainer{
   position:relative;
@@ -183,8 +213,8 @@
   height:100%;
 }
 
-.desktop.imgContainer {display:block;}
-.mobile.imgContainer {display:none}
+.desktop.imgContainer {display:block; position: absolute;}
+.mobile.imgContainer {display:none; position: absolute;}
 
 @media all and (max-width: 640px) {
   .desktop.imgContainer {display: none;}

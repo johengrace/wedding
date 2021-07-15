@@ -1,4 +1,4 @@
-import { Menu } from "antd";
+import { Button, Menu } from "antd";
 import 'antd/dist/antd.css';
 import { Link as ScrollLink } from "react-scroll";
 
@@ -21,11 +21,12 @@ const NavBar = () => {
                     Our Story
                 </ScrollLink>
             </Menu.Item>
-            <Menu.Item key="rsvp">
+            {/* <Menu.Item key="rsvp">
                 <ScrollLink to="rsvp"  smooth={true}>
                     RSVP
                 </ScrollLink>
-            </Menu.Item>
+            </Menu.Item> */}
+            <Button className="rsvp-button" type="primary">RSVP</Button>
             
         </Menu>
         </div>

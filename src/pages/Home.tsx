@@ -33,58 +33,61 @@ const Home = () => {
     }, 8000);
 
     return(
-    <motion.div
-      animate={{
-        opacity: 1
-      }}
-      transition={{ ease: "easeInOut", duration: 0.5 }}
-      initial={{ opacity: 0 }}
-      className="home"
-    >
-        <div className="home">
-            <div className="prename">
-                <motion.h1
-                    animate={{
-                        opacity: 1,
-                        y: 0
-                    }}
-                    transition={{ ease: "easeInOut", delay: 1, duration: 0.5 }}
-                    initial={{ opacity: 0, y: 20 }}
-                >
-                    The Wedding of
-                </motion.h1>
-            </div>
-
-            <div className="name">
-            <motion.h1
+    
+    <div className="home">
+        <div className="name">
+            <motion.h2
                 animate={{
                     opacity: 1,
                     y: 0
                 }}
                 transition={{ ease: "easeInOut", delay: 1, duration: 0.5 }}
                 initial={{ opacity: 0, y: 20 }}
+                className="prename"
             >
-                Joshua & Grace
-            </motion.h1>
-            </div>
-            
-            {/* Cover picture will be here */}
-            <CrossFadeImage
-                src={image}
-                alt="desktop"
-                transitionDuration={0.8}
-                curve="ease-in-out"
-                className="desktop"
-            />
-            <CrossFadeImage
-                src={vImage}
-                alt="phonee"
-                transitionDuration={0.8}
-                curve="ease-in-out"
-                className="mobile"
-            />
-            </div>
-    </motion.div>
+                02.10.2021
+            </motion.h2>
+
+        <motion.h1
+            animate={{
+                opacity: 1,
+                y: 0
+            }}
+            transition={{ ease: "easeInOut", delay: 1, duration: 0.5 }}
+            initial={{ opacity: 0, y: 20 }}
+        >
+            Joshua & Grace
+        </motion.h1>
+
+        <motion.h2
+            animate={{
+                opacity: 1,
+                y: 0
+            }}
+            transition={{ ease: "easeInOut", delay: 1, duration: 0.5 }}
+            initial={{ opacity: 0, y: 20 }}
+            className="postname"
+        >
+            We're Getting Married!
+        </motion.h2>
+        </div>
+        
+        {/* Cover picture will be here */}
+        <CrossFadeImage
+            src={image}
+            alt="desktop"
+            transitionDuration={0.8}
+            curve="ease-in-out"
+            className="desktop"
+        />
+        <CrossFadeImage
+            src={vImage}
+            alt="phonee"
+            transitionDuration={0.8}
+            curve="ease-in-out"
+            className="mobile"
+        />
+    </div>
     )
 }
 
