@@ -12,7 +12,7 @@ const NavBar = () => {
                 </ScrollLink>
             </Menu.Item>
             <Menu.Item key="event">
-                <ScrollLink to="event" smooth={true}>
+                <ScrollLink to="event" smooth={true} offset={40}>
                     Event
                 </ScrollLink>
             </Menu.Item>

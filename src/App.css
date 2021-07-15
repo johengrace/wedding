@@ -108,6 +108,9 @@
 .weddingEvent {
   height: 100%;
   width: 100%;
+  background-image: url("../src/assets/leaves1.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 
 .story {
@@ -200,11 +203,29 @@
   width: 100%;
   height: 100%;
   font-family:'Montserrat', sans-serif;
+  margin-top:92px;
 }
 
 .invitation {
   width: 100%;
   height:100%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 3.0vh;
+}
+
+.invitationContent{
+  margin-top: 92px;
+}
+
+.invitationName{
+  font-family: "Bluehonest", cursive;
+  margin-bottom: -21px;
+  font-size: 10vh;
+}
+
+h3.invitationText{
+  margin-top: 25px;
+  font-weight: bold;
 }
 
 .desktop.imgContainer {display:block;}
@@ -217,3 +238,6 @@
 }
 
 
+Button{
+  margin:10px;
+}

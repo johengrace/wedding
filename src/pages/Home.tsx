@@ -39,15 +39,8 @@ const Home = () => {
       }}
       transition={{ ease: "easeInOut", duration: 0.5 }}
       initial={{ opacity: 0 }}
-      className="home"
     >
         <div className="home">
-            <div className="home-content">
-                <h4 className="prename">We're Getting Married!</h4>  
-                <h2 className="name">Joshua & Grace</h2>
-                <h4 className="weddingDate">02.10.21</h4>
-            </div>
-
             {/* Cover picture will be here */}
             <CrossFadeImage
                 src={image}
@@ -63,6 +56,12 @@ const Home = () => {
                 curve="ease-in-out"
                 className="mobile"
             />
+
+            <div className="home-content">
+                <h4 className="prename">We're Getting Married!</h4>  
+                <h2 className="name">Joshua & Grace</h2>
+                <h4 className="weddingDate">02.10.21</h4>
+            </div>
         </div>
     </motion.div>
     )
