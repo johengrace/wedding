@@ -11,7 +11,7 @@ const WEvent = () => {
                     <div className="invitationContent">
                         <h4 className="invitationText">By the grace of God, <br/> We cordially invite you to join us in our Holy Matrimony</h4>
                         <h1 className="invitationName">Joshua Hendinata</h1>
-                        <h4>Son of Mr. Hadi Sucianto and Mrs. Erviany Ie Lie Tshiu</h4>
+                        <h4>Son of Mr. Hadi Sucianto and Mrs. Erviany</h4>
                         <h1 style={{margin:"-5px"}}>&</h1>
                         <h1 className="invitationName">Grace Christina</h1>
                         <h4>Daughter of Mr. Sutopo Hermanto and Mrs. Minawati Yap</h4>
