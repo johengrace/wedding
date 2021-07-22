@@ -93,6 +93,7 @@
   margin-right: 80px;
 }
 
+/* Home Page */
 .home {
   width: 100%;
   height: 100vh;
@@ -104,6 +105,7 @@
   padding-top: -20px;
 }
 
+/* Wedding Event Page */
 .event{
   width: 100%;
   height: 100vh;
@@ -113,7 +115,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #bf9b9b;
+  background-color: white;
 }
 
 .weddingEvent {
@@ -122,6 +124,37 @@
   background-image: url("../src/assets/leaves1.jpg");
   background-size:cover;
   background-repeat: no-repeat;
+}
+
+.youtubeVideo{
+  width: 100%;
+  height: 100%;
+  font-family:'Montserrat', sans-serif;
+  margin-top:92px;
+}
+
+.invitation {
+  width: 100%;
+  height:100%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 3.0vh;
+}
+
+/* .invitationContent{
+  margin-top: 92px;
+} */
+
+.invitationName{
+  font-family: "Bluehonest", cursive;
+  font-size: 9vh;
+}
+
+.invitationAnd{
+  font-size: 5vh;
+}
+
+.parents{
+  margin-top: -15px;
 }
 
 .story {
@@ -210,34 +243,7 @@
   position: relative;
 }
 
-.youtubeVideo{
-  width: 100%;
-  height: 100%;
-  font-family:'Montserrat', sans-serif;
-  margin-top:92px;
-}
 
-.invitation {
-  width: 100%;
-  height:100%;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 3.0vh;
-}
-
-.invitationContent{
-  margin-top: 92px;
-}
-
-.invitationName{
-  font-family: "Bluehonest", cursive;
-  margin-bottom: -21px;
-  font-size: 10vh;
-}
-
-h3.invitationText{
-  margin-top: 25px;
-  font-weight: bold;
-}
 
 .desktop.imgContainer {display:block;}
 .mobile.imgContainer {display:none}
