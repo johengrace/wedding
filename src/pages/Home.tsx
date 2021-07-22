@@ -6,6 +6,7 @@ import vertical1 from "../assets/vertical1.jpg";
 import shuffle from "lodash/shuffle";
 import CrossFadeImage from "../component/CrossFadeImage";
 import useInterval from "../component/useInterval";
+import { Container, Row } from "react-bootstrap";
 
 let images: string[] = [cover1, cover2];
 let vImages: string[] = [vertical1];
@@ -33,37 +34,38 @@ const Home = () => {
     }, 8000);
 
     return(
-    <motion.div
-      animate={{
-        opacity: 1
-      }}
-      transition={{ ease: "easeInOut", duration: 0.5 }}
-      initial={{ opacity: 0 }}
-    >
-        <div className="home">
-            {/* Cover picture will be here */}
-            <CrossFadeImage
-                src={image}
-                alt="desktop"
-                transitionDuration={0.8}
-                curve="ease-in-out"
-                className="desktop"
-            />
-            <CrossFadeImage
-                src={vImage}
-                alt="phonee"
-                transitionDuration={0.8}
-                curve="ease-in-out"
-                className="mobile"
-            />
-
-            <div className="home-content">
-                <h4 className="prename">We're Getting Married!</h4>  
-                <h2 className="name">Joshua & Grace</h2>
-                <h4 className="weddingDate">02.10.21</h4>
-            </div>
-        </div>
-    </motion.div>
+        <Container fluid>
+            <motion.div
+            animate={{
+                opacity: 1
+            }}
+            transition={{ ease: "easeInOut", duration: 0.5 }}
+            initial={{ opacity: 0 }}
+            >
+                <div className="home">
+                    {/* Cover picture will be here */}
+                    <CrossFadeImage
+                        src={image}
+                        alt="desktop"
+                        transitionDuration={0.8}
+                        curve="ease-in-out"
+                        className="desktop"
+                    />
+                    <CrossFadeImage
+                        src={vImage}
+                        alt="phonee"
+                        transitionDuration={0.8}
+                        curve="ease-in-out"
+                        className="mobile"
+                    />
+                    <div className="home-content text-center my-5">
+                        <Row><h4 className="prename">We're Getting Married!</h4></Row>  
+                        <Row><h2 className="name">Joshua & Grace</h2></Row>
+                        <Row><h4 className="weddingDate">02.10.21</h4></Row>
+                    </div>
+                </div>
+            </motion.div>       
+        </Container>
     )
 }
 
