@@ -49,6 +49,17 @@
   }
 }
 
+/* Navigation Bar Bootstrap */
+.navbar {
+  height: 45px;
+}
+
+.navbar-toggler{
+  padding: 0rem 0.5rem;
+}
+
+
+/* Navigation others to be deleted */
 .top-nav {
   position: 'relative';
   display: 'float';
@@ -238,6 +249,3 @@ h3.invitationText{
 }
 
 
-Button{
-  margin:10px;
-}
