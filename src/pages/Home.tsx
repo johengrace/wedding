@@ -34,38 +34,36 @@ const Home = () => {
     }, 8000);
 
     return(
-        <Container fluid>
-            <motion.div
-            animate={{
-                opacity: 1
-            }}
-            transition={{ ease: "easeInOut", duration: 0.5 }}
-            initial={{ opacity: 0 }}
-            >
-                <div className="home">
-                    {/* Cover picture will be here */}
-                    <CrossFadeImage
-                        src={image}
-                        alt="desktop"
-                        transitionDuration={0.8}
-                        curve="ease-in-out"
-                        className="desktop"
-                    />
-                    <CrossFadeImage
-                        src={vImage}
-                        alt="phonee"
-                        transitionDuration={0.8}
-                        curve="ease-in-out"
-                        className="mobile"
-                    />
-                    <div className="home-content text-center my-5">
-                        <Row><h4 className="prename">We're Getting Married!</h4></Row>  
-                        <Row><h2 className="name">Joshua & Grace</h2></Row>
-                        <Row><h4 className="weddingDate">02.10.21</h4></Row>
-                    </div>
+        <motion.div
+        animate={{
+            opacity: 1
+        }}
+        transition={{ ease: "easeInOut", duration: 0.5 }}
+        initial={{ opacity: 0 }}
+        >
+            <div className="home">
+                {/* Cover picture will be here */}
+                <CrossFadeImage
+                    src={image}
+                    alt="desktop"
+                    transitionDuration={0.8}
+                    curve="ease-in-out"
+                    className="desktop"
+                />
+                <CrossFadeImage
+                    src={vImage}
+                    alt="phonee"
+                    transitionDuration={0.8}
+                    curve="ease-in-out"
+                    className="mobile"
+                />
+                <div className="home-content text-center my-5">
+                    <Row><h4 className="prename">We're Getting Married!</h4></Row>  
+                    <Row><h2 className="name">Joshua & Grace</h2></Row>
+                    <Row><h4 className="weddingDate">02.10.21</h4></Row>
                 </div>
-            </motion.div>       
-        </Container>
+            </div>
+        </motion.div>       
     )
 }
 

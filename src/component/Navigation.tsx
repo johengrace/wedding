@@ -15,7 +15,7 @@ const NavBar = () => {
                         eventKey="home"
                         onSelect={() => scroller.scrollTo('home', {
                             smooth: true,
-                            offset: -70,
+                            offset: 0,
                             duration: 500,
                         })}
                         >
@@ -25,7 +25,7 @@ const NavBar = () => {
                         eventKey="event"
                         onSelect={() => scroller.scrollTo('event', {
                         smooth: true,
-                        offset: -70,
+                        offset: -30,
                         duration: 500,
                         })}
                         >

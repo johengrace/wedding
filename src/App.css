@@ -95,42 +95,37 @@
 
 /* Home Page */
 .home {
-  width: 100%;
+  /* width: 100%; */
   height: 100vh;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: -20px;
 }
 
 /* Wedding Event Page */
 .event{
   width: 100%;
   height: 100vh;
-  box-sizing: border-box;
-  font-family: "Cookie", cursive;
   display: flex;
-  flex-direction: column;
+  flex-direction: inherit;
   align-items: center;
   justify-content: center;
   background-color: white;
+  background-image: url("../src/assets/leaves1.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 
 .weddingEvent {
   height: 100%;
   width: 100%;
-  background-image: url("../src/assets/leaves1.jpg");
-  background-size:cover;
-  background-repeat: no-repeat;
 }
 
 .youtubeVideo{
   width: 100%;
   height: 100%;
   font-family:'Montserrat', sans-serif;
-  margin-top:92px;
 }
 
 .invitation {
