@@ -115,7 +115,7 @@
   align-items: center;
   justify-content: center;
   background-color: white;
-  background-image: url("../src/assets/leaves1.jpg");
+  /* background-image: url("../src/assets/leaves1.jpg"); */
   background-size:cover;
   background-repeat: no-repeat;
 }
