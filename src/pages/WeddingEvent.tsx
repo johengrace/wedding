@@ -1,7 +1,5 @@
 import YoutubeEmbed from '../component/YoutubeEmbed';
-import { Button, Radio } from 'antd';
-import { DownloadOutlined } from '@ant-design/icons';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 
 const WEvent = () => {
     return(
@@ -19,10 +17,12 @@ const WEvent = () => {
                         </Col>
                         <Col lg={true} className="youtubeVideo my-5">
                             <YoutubeEmbed/>
-                            <Button type="primary" icon={<DownloadOutlined />}>
+                            <Button variant="success">
                                 Download Booklet
+                            </Button>{' '}
+                            <Button variant="success">
+                                Add To Calendar
                             </Button>
-                            <Button>Add To Calendar</Button>
                         </Col>
                 </Row>
             </div>
