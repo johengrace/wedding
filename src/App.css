@@ -155,9 +155,10 @@
   margin-bottom: 5px;
 }
 
+/* Our Story Section */
 .story {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   display: flex;
@@ -166,6 +167,15 @@
   justify-content: center;
   padding-top: 40px;
   background-color: #8bbbd9;
+}
+
+@media only screen and (min-width: 1170px){
+.vertical-timeline--two-columns .vertical-timeline-element-icon {
+    width: 40px;
+    height: 40px;
+    left: 51%;
+    margin-left: -30px;
+  }
 }
 
 .rsvp {
