@@ -2,10 +2,13 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import { FaHeart } from "react-icons/fa";
 import TimelineContent from '../component/TimelineContent';
+import { Row } from 'react-bootstrap';
 
 const Story = () => {
     return(
-        <div className="story" id="story">
+        <Row>
+        <div className="story">
+
             <VerticalTimeline>
                 <TimelineContent>
                     <h3 className="vertical-timeline-element-title">Aug 2013</h3>
@@ -48,11 +51,14 @@ const Story = () => {
                     <h3 className="vertical-timeline-element-title">20XX</h3>
                     <h4 className="vertical-timeline-element-subtitle">To Infinity and Beyond!</h4>
                     <p>
-                        Hopefully, Joshua and Grace's junior is in the making 😉
+                        Hopefully, Joshua and Grace's junior is in the making 
                     </p>
                 </TimelineContent>
             </VerticalTimeline>
+
         </div>
+        </Row>
+
     )
 }
 

@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
+import { Container } from "react-bootstrap";
 import Home from "./Home";
 import Rsvp from "./Rsvp";
 import Story from "./Story";

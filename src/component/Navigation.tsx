@@ -24,7 +24,7 @@ const NavBar = () => {
                         <Nav.Link 
                         className="mx-2"
                         eventKey="event"
-                        onSelect={() => scroller.scrollTo('event', {
+                        onSelect={() => scroller.scrollTo('weddingEvent', {
                         offset: -30,
                         duration: 200,
                         delay: 0,
