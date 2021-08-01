@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Serendipity+Wide&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 @import url(//db.onlinewebfonts.com/c/81651a191b7129993b0871c834a19600?family=Orpheus+Pro);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 @font-face {
   font-family: Bluehonest;
@@ -134,8 +135,9 @@
 .invitation {
   width: 100%;
   height:100%;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 3.0vh;
+  color: #7b7571;
 }
 
 /* .invitationContent{
@@ -145,10 +147,6 @@
 .invitationName{
   font-family: "Bluehonest", cursive;
   font-size: 9vh;
-}
-
-.invitationAnd{
-  font-size: 5vh;
 }
 
 .parents{
@@ -170,13 +168,20 @@
 }
 
 @media only screen and (min-width: 1170px){
-.vertical-timeline--two-columns .vertical-timeline-element-icon {
-    width: 40px;
-    height: 40px;
-    left: 51%;
-    margin-left: -30px;
+  .vertical-timeline--two-columns .vertical-timeline-element-icon {
+    width: 40px !important;
+    height: 40px !important;
+    left: 51% !important;
+    margin-left: -32px !important;
+  }
+
+  .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+    top: -6px!important;
+    text-align: left;
+    font-weight: bold;
   }
 }
+
 
 .rsvp {
   width: 100%;

@@ -13,6 +13,7 @@
     "@types/react": "^17.0.9",
     "@types/react-dom": "^17.0.6",
     "bootstrap": "^5.0.2",
+    "font-awesome": "^4.7.0",
     "framer-motion": "^4.1.17",
     "lodash.shuffle": "^4.2.0",
     "react": "^17.0.2",
