@@ -46,7 +46,7 @@ const TextFieldRsvp = withStyles({
 const RadioTextRsvp = withStyles({
   label: {
       fontFamily: '"Open Sans", sans-serif !important',
-      color: '#7b7571'
+      color: 'rgb(93, 88, 84)'
   },
 })(FormControlLabel);
 
@@ -57,8 +57,8 @@ const Rsvp = () => {
     const handleSubmit = (event: any) => {
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
-        event.preventDefault();
-        event.stopPropagation();
+            event.preventDefault();
+            event.stopPropagation();
         }
 
         setValidated(true);
@@ -89,6 +89,9 @@ const Rsvp = () => {
             </Col>
             
             <Col lg={6} xs={12} className="rsvpForm">
+                <Row>
+                    <p className="invitation">We Truly Hope You Can Join Us!</p>
+                </Row>
                 <Form validated={validated} onSubmit={handleSubmit}>
                     <Row>
                         <Form.Group as={Col} xs={12} >
@@ -112,6 +115,13 @@ const Rsvp = () => {
                                 <RadioTextRsvp value="Attending" control={<Radio color="default" />} label="Attending" />
                                 <RadioTextRsvp value="Not Attending" control={<Radio color="default"  />} label="Not Attending" />
                             </RadioGroup>
+                            <FormLabel className="openSans my-3 lh-lg">
+                                Due to the limited guests regulation from Singapore Government, 
+                                please RSVP only for yourself. 
+                                <br/>All +1s will be invited separately. 
+                                Thank you and we appreciate your understanding
+                            </FormLabel>
+                            <FormLabel component="label" className="openSans my-3"><b>Kindly RSVP by 5 Sep 2021</b></FormLabel>
                         </Form.Group>
                     </Row>
                     <Row>
