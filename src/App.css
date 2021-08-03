@@ -188,7 +188,7 @@
   height: 100vh;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  background-color: #bf9b9b;
+  background-color: #F2E0DC;
 }
 
 .s-heading h1 {
@@ -253,8 +253,34 @@
 
 .rsvpPhoto {
   z-index: 1 !important;
+  overflow: hidden;
 }
 
+.rsvpForm {
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  padding: 70px 50px !important;
+}
+
+.rsvpPhoto img {
+  /* center the image vertically */
+  position: absolute;
+  top:-100%; left:0; right: 0; bottom:-100%;
+  margin: auto;
+}
+
+.rsvpForm .row>* {
+  margin-bottom: 37px;
+}
+
+.rsvpForm .row {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.openSans {
+  font-family: 'Open Sans', sans-serif !important;
+}
 
 .desktop.imgContainer {display:block;}
 .mobile.imgContainer {display:none}
