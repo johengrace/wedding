@@ -1,8 +1,15 @@
 import { Button } from 'react-bootstrap';
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { scroller } from "react-scroll";
+import { InferProps } from "prop-types";
 
-const NavBar = () => {
+interface propTypes {
+    rsvpFlag: boolean;
+}
+
+type Props = InferProps<propTypes>;
+
+const NavBar = ({ rsvpFlag } : Props) => {
     return(
         <Container>
             <Navbar expand="lg" bg="light" variant="light" fixed="top" >
@@ -42,6 +49,7 @@ const NavBar = () => {
                         >
                             Our Story
                         </Nav.Link>
+                        { rsvpFlag ?
                         <Button 
                         className="navbar-right mx-2"
                         variant="outline-primary"
@@ -51,7 +59,8 @@ const NavBar = () => {
                         duration: 200,
                         })}>
                             RSVP
-                        </Button>
+                        </Button> 
+                        : <></>}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
