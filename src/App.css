@@ -181,11 +181,15 @@
     text-align: left;
     font-weight: bold;
   }
+
+  .rsvp {
+    height: 100vh !important;
+  }
 }
 
 
 .rsvp {
-  height: 100vh;
+  height: 100%;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   background-color: #F2E0DC;
@@ -278,6 +282,14 @@
   padding-right: 50px;
 }
 
+.rsvpForm .invitation {
+  font-family: "Bluehonest", cursive;
+  font-size: 6vh;
+  text-align: center;
+  color: #7b7571;
+  word-spacing: -14px;
+}
+
 .openSans {
   font-family: 'Open Sans', sans-serif !important;
 }
@@ -301,3 +313,8 @@
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
+
+/* Material UI related */
+.MuiFormLabel-root {
+    color: rgb(93, 88, 84) !important;
+} 
