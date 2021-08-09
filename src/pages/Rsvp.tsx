@@ -1,4 +1,5 @@
 import { Col, Container, Row, Form } from 'react-bootstrap';
+import axios from 'axios';
 import React from "react";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -77,6 +78,7 @@ interface FormValue {
     email?: string,
     phone?: string,
     attendance?: string,
+    vaccinated?:string,
     messageForCouple?: string
 }
 
@@ -98,16 +100,42 @@ const Rsvp = () => {
             event.stopPropagation();
             return;
         }
+        
+        const targetForm = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScypildVC9SU0EFyIBwckPWRc6Q9Hk8RJbssO0hhyKJmltXLQ/formResponse";
+        setFormLoading(true);
 
-        setFormLoading(true)
-        setTimeout(() => {setFormSubmitted(true);}, 3000)
+        axios.post(
+            targetForm, null, 
+            {
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                params: {
+                    "entry.1509748593": formValue.name,
+                    "entry.476281907": formValue.email,
+                    "entry.2136064807": formValue.phone,
+                    "entry.842295271": formValue.attendance,
+                    "entry.1278028715": formValue.vaccinated,
+                    "entry.1528621649": formValue.messageForCouple
+                }
+            }
+        )
+        .then(response => {
+            setFormSubmitted(true);
+            setFormLoading(false);
+        })
+        .catch(error => {
+            // CORS wont allow JS to inspect the headers. So just assume it succeed
+            setFormSubmitted(true);
+            setFormLoading(false);
+        });
         
         event.preventDefault();
         event.stopPropagation();
     };
 
     const submitAnotherRsvp = () => {
-        setFormValue({name: "", email: "", phone: "", attendance: "", messageForCouple: ""})
+        setFormValue({name: "", email: "", phone: "", attendance: "", vaccinated: "", messageForCouple: ""})
         setFormSubmitted(false)
         setFormLoading(false)
     }
@@ -142,7 +170,7 @@ const Rsvp = () => {
                 </Row>
                 <div className={formSubmitted ? "" : "d-none"}>
                     <Row>
-                        <FormLabel className="openSans mt-3 lh-lg">
+                        <FormLabel className="openSans mt-3 lh-lg text-center">
                             Thank you for your RSVP! Your response has been recorded.
                         </FormLabel>
                     </Row>
@@ -175,17 +203,16 @@ const Rsvp = () => {
                                 onChange={handleChange} />
                         </Form.Group>
                     </Row>
-                    <Row>
+                     <Row>
                         <Form.Group as={Col} xs={12} >
                             <TextFieldRsvp 
-                                required 
                                 type="tel" 
-                                label="Phone Number" 
+                                label="Phone Number (Optional)" 
                                 name="phone"
                                 value={formValue.phone} 
                                 onChange={handleChange} />
                         </Form.Group>
-                    </Row>
+                    </Row> 
                     <Row>
                         <Form.Group as={Col} xs={12} >
                             <FormLabel component="legend" className="openSans lh-lg">Will you attend our wedding onsite? <b>Kindly RSVP by 5 Sep 2021</b></FormLabel>
@@ -194,23 +221,47 @@ const Rsvp = () => {
                                     value="Attending" 
                                     name="attendance"
                                     onChange={handleChange}
-                                    control={<Radio color="default" required/>} 
+                                    control={<Radio color="default" required checked={formValue.attendance === "Attending"}/>} 
                                     label="Attending" />
                                 <RadioTextRsvp 
                                     value="Not Attending" 
                                     name="attendance"
                                     onChange={handleChange}
-                                    control={<Radio color="default" />} 
+                                    control={<Radio color="default" checked={formValue.attendance === "Not Attending"}/>} 
                                     label="Not Attending" />
                             </RadioGroup>
                             <FormLabel className="openSans mt-3 lh-lg">
-                                Due to the limited guests regulation from Singapore Government, 
-                                please RSVP only for yourself. 
-                                <br/>All +1s will be invited separately. 
-                                Thank you and we appreciate your understanding.
+                                <i>Please RSVP only for yourself. All +1s will be invited separately.</i>
                             </FormLabel>
                         </Form.Group>
                     </Row>
+                    {formValue.attendance === "Attending" ? <><Row>
+                        <Form.Group as={Col} xs={12} >
+                            <FormLabel component="legend" className="openSans lh-lg">Will you receive COVID-19 full vaccination by 18 Sep 2021?</FormLabel>
+                            <RadioGroup aria-label="vaccinated" name="vaccinated" >
+                                <RadioTextRsvp 
+                                    value="Yes" 
+                                    name="vaccinated"
+                                    onChange={handleChange}
+                                    control={
+                                        <Radio 
+                                            color="default"
+                                            required={formValue.attendance === "Attending"}
+                                            checked={formValue.vaccinated === "Yes"}/>
+                                    } 
+                                    label="Yes" />
+                                <RadioTextRsvp 
+                                    value="No" 
+                                    name="vaccinated"
+                                    onChange={handleChange}
+                                    control={<Radio color="default" checked={formValue.vaccinated === "No"}/>} 
+                                    label="No" />
+                            </RadioGroup>
+                            <FormLabel className="openSans mt-3 lh-lg">
+                                <i>This will determine the number of guests allowed onsite</i>
+                            </FormLabel>
+                        </Form.Group>
+                    </Row></> : <></>}
                     <Row>
                         <Form.Group as={Col} xs={12} >
                             <TextFieldRsvp 
@@ -234,30 +285,6 @@ const Rsvp = () => {
                         </ButtonRsvp>
                     </Row>
                 </Form>  
-                {/* /* render default no rsvp content 
-                <Row>
-                    <p className="openSans mt-3 lh-lg">
-                        Dear guests - Due to the COVID-19 situation, only limited guest can attend the onsite wedding, 
-                        hence we will be tying the knot live from Youtube for some of our family 
-                        and friends who we wish to be there. We really appreciate your understanding.
-                        <br/>
-                        <br/>
-                        The youtube link will be available on this website on our wedding day, 2 October 2021
-                        <br/>
-                        <br/>
-                        Stay tune and hope to celebrate with you soon!
-                        <br/>
-                        <br/>
-                        <hr/>
-                        Kepada semua undangan yang terhormat. Karena kondisi pandemi COVID-19, pernikahan kami 
-                        hanya dapat dihadiri dengan jumlah undangan onsite yang terbatas. Kami berharap anda 
-                        dapat mengambil bagian dalam hari spesial kami melalui Youtube Live 
-                        (link akan tersedia di website ini pada hari H, 2 Oktober 2021)
-                        <br/>
-                        <br/>
-                        Terima kasih untuk dukungan dan doa anda.
-                    </p>
-                </Row> */}
             </Col>
         </Row>
     )
