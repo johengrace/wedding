@@ -183,7 +183,7 @@
   }
 
   .rsvp {
-    height: 100vh !important;
+    min-height: 100vh;
   }
 }
 
@@ -297,7 +297,7 @@
 .desktop.imgContainer {display:block;}
 .mobile.imgContainer {display:none}
 
-@media all and (max-width: 640px) {
+@media all and (max-width: 991px) {
   .desktop.imgContainer {display: none;}
   .mobile.imgContainer {display: block;}
   .name {top: 90px;}
