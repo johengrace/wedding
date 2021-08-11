@@ -33,29 +33,26 @@ const NavBar = ({ rsvpFlag } : Props) => {
                             offset: 0,
                             duration: 200,
                             delay: 0,
-                        })}
-                        >
+                        })}>
                             Home
                         </Nav.Link>
                         <Nav.Link 
                         className="mx-2"
                         eventKey="event"
                         onSelect={() => scroller.scrollTo('weddingEvent', {
-                        offset: -30,
-                        duration: 200,
-                        delay: 0,
-                        })}
-                        >
+                            offset: -30,
+                            duration: 200,
+                            delay: 0,
+                        })}>
                             Event
                         </Nav.Link>
                         <Nav.Link 
                         className="mx-2"
                         eventKey="story"
                         onSelect={() => scroller.scrollTo('story', {
-                        offset: -30,
-                        duration: 200,
-                        })}
-                        >
+                            offset: -30,
+                            duration: 200,
+                        })}>
                             Our Story
                         </Nav.Link>
                         <Button 
