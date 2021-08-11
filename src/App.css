@@ -169,7 +169,7 @@
   color: #544b45;
 }
 
-.countdown-container p:first-child, span {
+.countdown-container p:first-child, .countdown-container span {
   font-size: 1.8em;
   margin-bottom: 0px;
 }
