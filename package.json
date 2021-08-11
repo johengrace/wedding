@@ -25,6 +25,7 @@
     "react-hot-loader": "^4.13.0",
     "react-icons": "^4.2.0",
     "react-intersection-observer": "^8.32.0",
+    "react-pageflip": "^2.0.3",
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "4.0.3",
