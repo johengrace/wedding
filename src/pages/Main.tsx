@@ -7,6 +7,7 @@ import Rsvp from "./Rsvp";
 import Story from "./Story";
 import WEvent from "./WeddingEvent";
 import Gallery from "./Gallery"
+import Footer from "./Footer"
 
 interface propTypes {
     rsvpFlag: boolean;
@@ -28,6 +29,7 @@ const Main = ({ rsvpFlag } : Props) => {
             <Story/>
             {rsvpFlag ? <Rsvp /> : <></>} 
             <Gallery/>
+            <Footer/>
         </motion.div>
         </AnimatePresence>
     );
