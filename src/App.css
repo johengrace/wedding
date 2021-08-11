@@ -434,6 +434,11 @@
   }
 }
 
+.footer { 
+  background: rgb(242,201,220);
+  color: rgb(93, 88, 84) !important;
+}
+
 /* Bootstrap Related */
 .row {
   margin-left: 0px !important;
