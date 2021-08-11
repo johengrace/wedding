@@ -47,8 +47,8 @@ const Gallery = () => {
                         src="https://i.pinimg.com/originals/93/10/30/931030519d5dacba7f810e6ae40d3ea9.png"/>
                         <ul>
                             <li><img src={img1} /></li>
-                            <li><img src={img1} /></li>
-                            <li><img src={img1} /></li>
+                            <li><div className="emptyImage"/></li>
+                            <li><div className="emptyImage"/></li>
                             <li><img src={img1} /></li>
                         </ul>
                     </Page>
@@ -58,8 +58,8 @@ const Gallery = () => {
                         src="https://i.pinimg.com/originals/93/10/30/931030519d5dacba7f810e6ae40d3ea9.png"/>
                         <ul>
                             <li><img src={img1} /></li>
-                            <li><img src={img1} /></li>
-                            <li><img src={img1} /></li>
+                            <li><div className="emptyImage"/></li>
+                            <li><div className="emptyImage"/></li>
                             <li><img src={img1} /></li>
                         </ul>
                     </Page>

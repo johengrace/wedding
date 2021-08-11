@@ -63,6 +63,10 @@
   font-size: 27px !important;
 }
 
+.blueHonest{
+  font-family: 'Bluehonest', cursive;
+}
+
 /* Navigation others to be deleted */
 .top-nav {
   position: 'relative';
@@ -120,6 +124,8 @@
   /* background-image: url("../src/assets/leaves1.jpg"); */
   background-size:cover;
   background-repeat: no-repeat;
+  background: rgb(139,187,217);
+  background: linear-gradient(0deg, rgba(139,187,217,1) 0%, rgba(223,238,245,1) 30%);
 }
 
 @media only screen and (min-width: 1170px){
@@ -139,7 +145,7 @@
   height:100%;
   font-family: 'Open Sans', sans-serif;
   font-size: 3.0vh;
-  color: #7b7571;
+  color: #544b45;
 }
 
 /* .invitationContent{
@@ -165,7 +171,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #8bbbd9;
+background: rgb(242,224,220);
+background: linear-gradient(0deg, rgba(242,224,220,1) 0%, rgba(139,187,217,1) 30%);
 }
 
 @media only screen and (min-width: 1170px){
@@ -357,21 +364,29 @@
 }
 
 .galleryPage li:nth-child(1){
-    /* transform:rotate(-10deg); */
-    margin: 0px 40px 0px 0px;
+    transform:rotate(-10deg); 
+    margin: 0px 40px 10px 0px;
 }
 
 .galleryPage li:nth-child(2){
     /* transform:rotate(6deg); */
+    margin: 0 12px;
+    background: transparent;
+    border:0px;
+    box-shadow:0px;
 }
 
 .galleryPage li:nth-child(3){
-    /* transform:rotate(2deg); */
-    margin: 0px 40px 0px 20px;
+    /* transform:rotate(2deg);  */
+    margin: 0px 40px 0px 0px;
+    margin: 0 15px;
+    background: transparent;
+    border:0px;
+    box-shadow:0px;
 }
 
 .galleryPage li:nth-child(4){
-    /* transform:rotate(-8deg); */
+     transform:rotate(8deg); 
 }
 
 .galleryPage li img {
@@ -383,6 +398,11 @@
   position:absolute;
   margin:0;
   padding:0;
+}
+
+.emptyImage {
+  background: transparent;
+  width: 15vw;
 }
 
 .openSans {
