@@ -1,4 +1,6 @@
 import { Col, Container, Row, Form } from 'react-bootstrap';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import Tooltip from 'react-bootstrap/Tooltip'
 import axios from 'axios';
 import React from "react";
 import TextField from '@material-ui/core/TextField';
@@ -8,6 +10,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
+import HelpIcon from '@material-ui/icons/Help';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { withStyles } from '@material-ui/core/styles';
 import CrossFadeImage from '../component/CrossFadeImage';
@@ -237,7 +240,18 @@ const Rsvp = () => {
                     </Row>
                     {formValue.attendance === "Attending" ? <><Row>
                         <Form.Group as={Col} xs={12} >
-                            <FormLabel component="legend" className="openSans lh-lg">Will you receive COVID-19 full vaccination by 18 Sep 2021?</FormLabel>
+                            <FormLabel component="legend" className="openSans lh-lg">
+                                Will you receive COVID-19 full vaccination by our wedding date? &nbsp;
+                                <OverlayTrigger
+                                    placement="auto"
+                                    overlay={
+                                        <Tooltip id="vaccinated-definition">
+                                            <b>Full vaccination</b> includes <b>2 weeks</b> after receiving the final dose(s) of COVID-19 vaccine
+                                        </Tooltip>
+                                    }>
+                                    <HelpIcon fontSize="small" className="mb-1"/>
+                                </OverlayTrigger>
+                            </FormLabel>
                             <RadioGroup aria-label="vaccinated" name="vaccinated" >
                                 <RadioTextRsvp 
                                     value="Yes" 
