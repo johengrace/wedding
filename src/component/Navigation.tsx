@@ -15,19 +15,46 @@ type Props = InferProps<propTypes>;
 
 const NavBar = ({ rsvpFlag } : Props) => {
     const [showModal, setShowModal] = React.useState(false);
+    const [scrollState, setScrollState] = React.useState("top");
 
     const handleClose = () => setShowModal(false);
+
+    let listener: any = null
+
+    React.useEffect(() => {
+        listener = document.addEventListener("scroll", e => {
+            var scrolled = window.scrollY
+            if (scrolled >= 120) {
+                if (scrollState !== "scrolled") {
+                    setScrollState("scrolled")
+                }
+            } else {
+                if (scrollState !== "top") {
+                    setScrollState("top")
+                }
+            }
+        })
+        return () => {
+            document.removeEventListener("scroll", listener)
+        }
+    }, [scrollState])
 
     return(
         <>
         <Container>
-            <Navbar expand="lg" bg="light" variant="light" fixed="top" >
+            <Navbar expand="lg" bg="custom" variant="light" fixed="top" 
+                className={scrollState === "top" ? "transparent" : ""}
+                onToggle={(expanded) => {
+                    if (expanded) {
+                        setScrollState("scroll")
+                    }
+                }}>
                 <Navbar.Brand className="d-block d-sm-block d-md-block d-lg-none d-xl-none py-0 mx-3 brand">Joshua & Grace</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" className="mx-2" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav" className="mx-2"/>
                 <Navbar.Collapse id="basic-navbar-nav " className="justify-content-center">
                     <Nav defaultActiveKey="/home">
                         <Nav.Link
-                        className="mx-2"
+                        className="mx-2 navBarButton"
                         eventKey="home"
                         onSelect={() => scroller.scrollTo('home', {
                             offset: 0,
@@ -37,7 +64,7 @@ const NavBar = ({ rsvpFlag } : Props) => {
                             Home
                         </Nav.Link>
                         <Nav.Link 
-                        className="mx-2"
+                        className="mx-2 navBarButton"
                         eventKey="event"
                         onSelect={() => scroller.scrollTo('weddingEvent', {
                             offset: -30,
@@ -47,7 +74,7 @@ const NavBar = ({ rsvpFlag } : Props) => {
                             Event
                         </Nav.Link>
                         <Nav.Link 
-                        className="mx-2"
+                        className="mx-2 navBarButton"
                         eventKey="story"
                         onSelect={() => scroller.scrollTo('story', {
                             offset: -30,
@@ -56,7 +83,7 @@ const NavBar = ({ rsvpFlag } : Props) => {
                             Our Story
                         </Nav.Link>
                         <Button 
-                        className="navbar-right mx-2"
+                        className="navbar-right mx-2 rsvpNavButton"
                         variant="outline-primary"
                         size="sm"
                         onClick={() => {
