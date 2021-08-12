@@ -86,6 +86,15 @@
   z-index: 99;
 }
 
+.bg-custom {
+  background: white;
+}
+
+.transparent {
+  background: transparent;
+  box-shadow: none;
+}
+
 .ant-menu-root {
   display: inline-block;
   width: 326px;
@@ -125,8 +134,7 @@
   /* background-image: url("../src/assets/leaves1.jpg"); */
   background-size:cover;
   background-repeat: no-repeat;
-  background: rgb(139,187,217); 
-  background: linear-gradient(0deg, rgba(139,187,217,1) 0%, rgba(223,238,245,1) 30%);
+  background: rgb(223,238,245); 
 }
 
 @media only screen and (min-width: 992px){
@@ -185,7 +193,12 @@
   align-items: center;
   justify-content: center;
   background: rgb(242,224,220);
-  background: linear-gradient(0deg, rgba(242,224,220,1) 0%, rgba(139,187,217,1) 30%);
+  background: linear-gradient(0deg, rgba(242,224,220,1) 0%, rgba(223,238,245,1) 30%);
+}
+
+.vertical-timeline {
+    padding: 0 0 2em 0 !important;
+    margin-top: 2.5em !important;
 }
 
 @media only screen and (min-width: 1170px){
@@ -213,25 +226,6 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   background-color: #F2E0DC;
-}
-
-.s-heading h1 {
-  color: var(--highlight);
-  font-size: 3rem;
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Cookie', cursive;
-  font-weight: 400!important;
-}
-.s-heading p {
-  color: var(--highlight);
-  font-size: 1rem;
-  margin: 0px;
-  padding: 0px;
-}
-.s-heading {
-  text-align: center;
-  margin: 3px 0px;
 }
 
 .home-content {
@@ -317,8 +311,7 @@
   padding-right: 50px;  
   padding-top: 3rem;
   padding-bottom: 3rem; 
-  background: rgb(242,201,220);
-  background: linear-gradient(0deg, rgba(242,201,220,1) 0%, rgba(242,224,220,1) 100%);
+  background: rgb(242,224,220);
 }
 
 .galleryBg {
@@ -427,7 +420,10 @@
 
 @media all and (max-width: 991px) {
   .desktop.imgContainer {display: none;}
-  .mobile.imgContainer {display: block;}
+  .mobile.imgContainer {
+    display: block;
+
+  }
   .name {top: 90px;}
 
   .gallery {
@@ -468,7 +464,7 @@
 }
 
 .footer { 
-  background: rgb(242,201,220);
+  background: rgb(242,224,220);
   color: rgb(93, 88, 84) !important;
 }
 
@@ -481,6 +477,88 @@
 .row>* {
   padding-left: 0px !important;
   padding-right: 0px !important;
+}
+
+
+
+.navbar-light .navbar-nav .navBarButton.nav-link:focus, 
+.navbar-light .navbar-nav .navBarButton.nav-link:hover {
+    color: rgba(84, 75, 69, 1);
+}
+.navbar-light .navbar-nav .navBarButton.nav-link {
+    color: rgba(84, 75, 69, .7);
+}
+.navbar-light .navbar-nav .navBarButton.nav-link.active, 
+.navbar-light .navbar-nav .show>.navBarButton.nav-link {
+    color: rgba(84, 75, 69,.9);
+}
+
+.btn-check:active+.rsvpNavButton.btn-outline-primary:focus, 
+.btn-check:checked+.rsvpNavButton.btn-outline-primary:focus, 
+.rsvpNavButton.btn-outline-primary.active:focus, 
+.rsvpNavButton.btn-outline-primary.dropdown-toggle.show:focus, 
+.rsvpNavButton.btn-outline-primary:active:focus {
+    box-shadow: 0 0 0 0.25rem rgba(84, 75, 69, 0.5);
+}
+
+.btn-check:active+.rsvpNavButton.btn-outline-primary, 
+.btn-check:checked+.rsvpNavButton.btn-outline-primary, 
+.rsvpNavButton.btn-outline-primary.active, 
+.rsvpNavButton.btn-outline-primary.dropdown-toggle.show, 
+.rsvpNavButton.btn-outline-primary:active {
+    color: #fff;
+    background-color: #544b45;
+    border-color: #544b45;
+}
+
+.btn-check:focus+.rsvpNavButton.btn-outline-primary, 
+.rsvpNavButton.btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.25rem rgba(84, 75, 69, 0.5);
+}
+  
+.rsvpNavButton.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #544b45;
+    border-color: #544b45;
+}
+
+.rsvpNavButton.btn-outline-primary {
+    color: #544b45;
+    border-color: #544b45;
+}
+
+.btn-check:active+.eventButton.btn-primary:focus, 
+.btn-check:checked+.eventButton.btn-primary:focus, 
+.eventButton.btn-primary.active:focus, 
+.eventButton.btn-primary:active:focus, 
+.show>.eventButton.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.25rem rgba(84, 75, 69, 0.6);
+}
+.btn-check:active+.eventButton.btn-primary, 
+.btn-check:checked+.eventButton.btn-primary, 
+.eventButton.btn-primary.active, 
+.eventButton.btn-primary:active, 
+.show>.eventButton.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #544b45;
+    border-color: #544b45;
+}
+.btn-check:focus+.eventButton.btn-primary, 
+.eventButton.btn-primary:focus {
+    color: #fff;
+    background-color: #544b45;
+    border-color: #544b45;
+    box-shadow: 0 0 0 0.25rem rgba(84, 75, 69, 0.6);
+}
+.eventButton.btn-primary:hover {
+    color: #fff;
+    background-color: #544b45;
+    border-color: #544b45;
+}
+.eventButton.btn-primary {
+    color: #fff;
+    background-color: rgba(84, 75, 69, 0.8);
+    border-color: rgba(84, 75, 69, 0.8);
 }
 
 /* Material UI related */
