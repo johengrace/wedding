@@ -479,18 +479,21 @@
   padding-right: 0px !important;
 }
 
+.nav-tabs .nav-link,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    color: rgba(84, 75, 69, 0.8);
+}
 
-
-.navbar-light .navbar-nav .navBarButton.nav-link:focus, 
-.navbar-light .navbar-nav .navBarButton.nav-link:hover {
+.navbar-light .navbar-nav .rsvpNavButton.nav-link:hover {
+    color: white;
+}
+.navbar-light .navbar-nav .rsvpNavButton.nav-link {
     color: rgba(84, 75, 69, 1);
 }
-.navbar-light .navbar-nav .navBarButton.nav-link {
-    color: rgba(84, 75, 69, .7);
-}
-.navbar-light .navbar-nav .navBarButton.nav-link.active, 
-.navbar-light .navbar-nav .show>.navBarButton.nav-link {
-    color: rgba(84, 75, 69,.9);
+.navbar-light .navbar-nav .rsvpNavButton.nav-link.active, 
+.navbar-light .navbar-nav .show>.rsvpNavButton.nav-link {
+    color: white;
 }
 
 .btn-check:active+.rsvpNavButton.btn-outline-primary:focus, 
@@ -559,6 +562,14 @@
     color: #fff;
     background-color: rgba(84, 75, 69, 0.8);
     border-color: rgba(84, 75, 69, 0.8);
+}
+
+.footer a:hover {
+    color: black;
+}
+.footer a {
+    color: #544b45;
+    text-decoration: underline;
 }
 
 /* Material UI related */

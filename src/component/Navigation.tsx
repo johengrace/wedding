@@ -44,6 +44,7 @@ const NavBar = ({ rsvpFlag } : Props) => {
         <Container>
             <Navbar expand="lg" bg="custom" variant="light" fixed="top" 
                 className={scrollState === "top" ? "transparent" : ""}
+                collapseOnSelect 
                 onToggle={(expanded) => {
                     if (expanded) {
                         setScrollState("scroll")
@@ -82,10 +83,9 @@ const NavBar = ({ rsvpFlag } : Props) => {
                         })}>
                             Our Story
                         </Nav.Link>
-                        <Button 
-                        className="navbar-right mx-2 rsvpNavButton"
-                        variant="outline-primary"
-                        size="sm"
+                        <Nav.Link 
+                        className="navbar-right mx-2 rsvpNavButton btn btn-outline-primary btn-sm"
+                        eventKey="rsvp"
                         onClick={() => {
                             if (rsvpFlag) {
                                 scroller.scrollTo('rsvp', {
@@ -98,7 +98,7 @@ const NavBar = ({ rsvpFlag } : Props) => {
                             }
                         }}>
                             RSVP
-                        </Button> 
+                        </Nav.Link> 
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
@@ -106,7 +106,7 @@ const NavBar = ({ rsvpFlag } : Props) => {
         <Modal show={showModal}>
             <Modal.Body>
                 <Tabs defaultActiveKey="english" className="mb-3">
-                    <Tab eventKey="english" title="English">
+                    <Tab eventKey="english" title="English" className="modalTab">
                         <p className="openSans mt-3 lh-lg">
                             Dear guests - Due to the COVID-19 situation, only limited guest can attend the onsite wedding, 
                             hence we will be tying the knot live from Youtube for some of our family 
@@ -119,7 +119,7 @@ const NavBar = ({ rsvpFlag } : Props) => {
                             Stay tune and hope to celebrate with you soon!
                         </p>
                     </Tab>
-                    <Tab eventKey="indonesia" title="Bahasa Indonesia">
+                    <Tab eventKey="indonesia" title="Bahasa Indonesia" className="modalTab">
                         <p className="openSans mt-3 lh-lg">
                             Kepada semua undangan yang terhormat, karena kondisi pandemi COVID-19, pernikahan kami 
                             hanya dapat dihadiri dengan jumlah undangan onsite yang terbatas. Kami berharap anda 
@@ -133,7 +133,7 @@ const NavBar = ({ rsvpFlag } : Props) => {
                 </Tabs>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
+                <Button variant="primary" onClick={handleClose} className="eventButton">
                     Close
                 </Button>
             </Modal.Footer>
