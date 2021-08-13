@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/wedding/static/css/main.22902a90.chunk.css",
-    "main.js": "/wedding/static/js/main.713a46b5.chunk.js",
-    "main.js.map": "/wedding/static/js/main.713a46b5.chunk.js.map",
+    "main.css": "/wedding/static/css/main.9e857dd3.chunk.css",
+    "main.js": "/wedding/static/js/main.55448b58.chunk.js",
+    "main.js.map": "/wedding/static/js/main.55448b58.chunk.js.map",
     "runtime-main.js": "/wedding/static/js/runtime-main.7d845e1e.js",
     "runtime-main.js.map": "/wedding/static/js/runtime-main.7d845e1e.js.map",
     "static/css/2.ba8d14a3.chunk.css": "/wedding/static/css/2.ba8d14a3.chunk.css",
-    "static/js/2.3438b046.chunk.js": "/wedding/static/js/2.3438b046.chunk.js",
-    "static/js/2.3438b046.chunk.js.map": "/wedding/static/js/2.3438b046.chunk.js.map",
+    "static/js/2.ebcb9468.chunk.js": "/wedding/static/js/2.ebcb9468.chunk.js",
+    "static/js/2.ebcb9468.chunk.js.map": "/wedding/static/js/2.ebcb9468.chunk.js.map",
     "static/js/3.43e18ffa.chunk.js": "/wedding/static/js/3.43e18ffa.chunk.js",
     "static/js/3.43e18ffa.chunk.js.map": "/wedding/static/js/3.43e18ffa.chunk.js.map",
     "index.html": "/wedding/index.html",
     "static/css/2.ba8d14a3.chunk.css.map": "/wedding/static/css/2.ba8d14a3.chunk.css.map",
-    "static/css/main.22902a90.chunk.css.map": "/wedding/static/css/main.22902a90.chunk.css.map",
-    "static/js/2.3438b046.chunk.js.LICENSE.txt": "/wedding/static/js/2.3438b046.chunk.js.LICENSE.txt",
+    "static/css/main.9e857dd3.chunk.css.map": "/wedding/static/css/main.9e857dd3.chunk.css.map",
+    "static/js/2.ebcb9468.chunk.js.LICENSE.txt": "/wedding/static/js/2.ebcb9468.chunk.js.LICENSE.txt",
     "static/media/App.css": "/wedding/static/media/Bluehonest Demo Version.f88b075f.otf",
     "static/media/DSC01317_compressed.8a0d54a4.jpg": "/wedding/static/media/DSC01317_compressed.8a0d54a4.jpg",
     "static/media/DSC01550_compressed_square.b70942f5.jpg": "/wedding/static/media/DSC01550_compressed_square.b70942f5.jpg",
@@ -25,8 +25,8 @@
   "entrypoints": [
     "static/js/runtime-main.7d845e1e.js",
     "static/css/2.ba8d14a3.chunk.css",
-    "static/js/2.3438b046.chunk.js",
-    "static/css/main.22902a90.chunk.css",
-    "static/js/main.713a46b5.chunk.js"
+    "static/js/2.ebcb9468.chunk.js",
+    "static/css/main.9e857dd3.chunk.css",
+    "static/js/main.55448b58.chunk.js"
   ]
 }
