@@ -148,6 +148,10 @@
   font-family:'Montserrat', sans-serif;
 }
 
+.youtubeEmbed {
+  height: 23vw;
+}
+
 .invitation {
   width: 100%;
   font-family: 'Open Sans', sans-serif;
@@ -171,10 +175,14 @@
 /* Countdown */ 
 .countdown-container {
   display: grid;
-  grid-template-columns: repeat(7, 55px);
+  grid-template-columns: repeat(7, 40px);
   justify-content: center;
   font-family: 'Open Sans', sans-serif;
   color: #544b45;
+  border: 1px solid #544b45;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  max-width: 400px;
 }
 
 .countdown-container p:first-child, .countdown-container span {
@@ -422,10 +430,13 @@
   .desktop.imgContainer {display: none;}
   .mobile.imgContainer {
     display: block;
-
   }
   .name {top: 90px;}
 
+  .youtubeEmbed {
+    height: 70vw;
+  }
+  
   .gallery {
     padding: 10px;
     height: 100%; 
