@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Serendipity+Wide&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
-@import url(//db.onlinewebfonts.com/c/81651a191b7129993b0871c834a19600?family=Orpheus+Pro);
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 @font-face {
@@ -436,7 +432,7 @@
   .youtubeEmbed {
     height: 70vw;
   }
-  
+
   .gallery {
     padding: 10px;
     height: 100%; 
