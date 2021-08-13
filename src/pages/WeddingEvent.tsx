@@ -56,39 +56,41 @@ const WEvent = <T extends any>(value: T) => {
                     </div>
                 </Col>
                 <Col lg={true} className="mt-5 mt-lg-0 justify-content-md-center">
-                    {/* <h5>Live in:</h5> */}
-                    <div className="countdown-container">
-                        <section>
-                            <p>{timerDays}</p>
-                            <p><small>Days</small></p> 
-                        </section>
-                        <span>:</span>
-                        <section>
-                            <p>{timerHours}</p>
-                            <p><small>Hours</small></p> 
-                        </section>
-                        <span>:</span>
-                        <section>
-                            <p>{timerMinutes}</p>
-                            <p><small>Minutes</small></p> 
-                        </section>
-                        <span>:</span>
-                        <section>
-                            <p>{timerSeconds}</p>
-                            <p><small>Seconds</small></p> 
-                        </section>
+                    <div className="mx-1">
+                        <div className="countdown-container">
+                            <section>
+                                <p>{timerDays}</p>
+                                <p><small>Days</small></p> 
+                            </section>
+                            <span>:</span>
+                            <section>
+                                <p>{timerHours}</p>
+                                <p><small>Hours</small></p> 
+                            </section>
+                            <span>:</span>
+                            <section>
+                                <p>{timerMinutes}</p>
+                                <p><small>Minutes</small></p> 
+                            </section>
+                            <span>:</span>
+                            <section>
+                                <p>{timerSeconds}</p>
+                                <p><small>Seconds</small></p> 
+                            </section>
+                        </div>
                     </div>
+                    
                     <div className="youtubeVideo mb-5 mb-lg-0 px-2 px-lg-0">
                         <Row>
                             <YoutubeEmbed/>
                         </Row>
                         <Row className="mt-2">
-                            <Col xs={6}>
+                            <Col lg={6}>
                                 <Button variant="primary" className="eventButton">
                                     Download Booklet
                                 </Button>
                             </Col>
-                            <Col xs={6}>
+                            <Col lg={6}>
                                 <Button variant="primary" className="eventButton">
                                     Add To Calendar
                                 </Button>
