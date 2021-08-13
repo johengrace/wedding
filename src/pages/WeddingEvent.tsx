@@ -88,12 +88,12 @@ const WEvent = () => {
                         </Row>
                         <Row className="mt-2">
                             <Col xs={6}>
-                                <Button variant="primary">
+                                <Button variant="primary" className="eventButton">
                                     Download Booklet
                                 </Button>
                             </Col>
                             <Col xs={6}>
-                                <Button variant="primary">
+                                <Button variant="primary" className="eventButton">
                                     Add To Calendar
                                 </Button>
                             </Col>

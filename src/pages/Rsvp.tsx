@@ -3,6 +3,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
 import axios from 'axios';
 import React from "react";
+import { MdHelp } from 'react-icons/md';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Radio from '@material-ui/core/Radio';
@@ -10,7 +11,6 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
-import HelpIcon from '@material-ui/icons/Help';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { withStyles } from '@material-ui/core/styles';
 import CrossFadeImage from '../component/CrossFadeImage';
@@ -249,7 +249,7 @@ const Rsvp = () => {
                                             <b>Full vaccination</b> includes <b>2 weeks</b> after receiving the final dose(s) of COVID-19 vaccine
                                         </Tooltip>
                                     }>
-                                    <HelpIcon fontSize="small" className="mb-1"/>
+                                    <MdHelp fontSize="small" className="mb-1"/>
                                 </OverlayTrigger>
                             </FormLabel>
                             <RadioGroup aria-label="vaccinated" name="vaccinated" >
