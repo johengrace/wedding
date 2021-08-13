@@ -171,7 +171,7 @@
 /* Countdown */ 
 .countdown-container {
   display: grid;
-  grid-template-columns: repeat(7, 55px);
+  grid-template-columns: repeat(7, 40px);
   justify-content: center;
   font-family: 'Open Sans', sans-serif;
   color: #544b45;

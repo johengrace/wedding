@@ -1,43 +1,38 @@
 import YoutubeEmbed from '../component/YoutubeEmbed';
 import { Button, Col, Row } from 'react-bootstrap';
 import { useEffect, useRef, useState } from 'react';
+import React from 'react';
 
-const WEvent = () => {
-    // const [timerDays, setTimerDays] = useState('00')
-    // const [timerHours, setTimerHours] = useState('00')
-    // const [timerMinutes, setTimerMinutes] = useState('00')
-    // const [timerSeconds, setTimerSeconds] = useState('00')
+const WEvent = <T extends any>(value: T) => {
+    const [timerDays, setTimerDays] = React.useState(0);
+    const [timerHours, setTimerHours] = React.useState(0);
+    const [timerMinutes, setTimerMinutes] = React.useState(0);
+    const [timerSeconds, setTimerSeconds] = React.useState(0);
+    const countdownDate = new Date('October 2, 2021 02:30:00').getTime();
 
-    // let interval = useRef();
+    React.useEffect(() => {
+        let interval = setInterval (() => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // const startTimer = () => {
-    //     const countdownDate = new Date('Oct 2 2021 10:30:00').getTime();
+            if(distance < 0) {
+                clearInterval(interval);
+              } else {
+                setTimerDays(days)
+                setTimerHours(hours)
+                setTimerMinutes(minutes)
+                setTimerSeconds(seconds)
+              }
+        }, 1000)
+        return () => {
+            clearInterval(interval);
+        }
+    });
 
-    //     interval = setInterval(() => {
-    //         const now = new Date().getTime();
-    //         const distance = countdownDate - now;
-    //         const days = Math.floor(distance  / (1000 * 60 * 60 * 24));
-    //         const hours = Math.floor ((distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)));
-    //         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    //         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    //         if(distance < 0) {
-    //             clearInterval(interval.current)
-    //         } else {
-    //             setTimerDays(days)
-    //             setTimerHours(hours)
-    //             setTimerMinutes(minutes)
-    //             setTimerSeconds(seconds)
-    //         }
-    //     }, 1000);
-    // };
-
-    // useEffect(() => {
-    //     startTimer();
-    //     return () => {
-    //         clearInterval(interval.current);
-    //     };
-    // });
 
 
     return(
@@ -60,25 +55,26 @@ const WEvent = () => {
                         <p className="mt-0 fs-5 fw-bold">Saturday, 2 October 2021 <br/>  Holy Matrimony at 10am | Bukit Batok Presbyterian Church </p>
                     </div>
                 </Col>
-                <Col lg={true} className="mt-5 mt-lg-0">
+                <Col lg={true} className="mt-5 mt-lg-0 justify-content-md-center">
+                    {/* <h5>Live in:</h5> */}
                     <div className="countdown-container">
                         <section>
-                            <p>100</p>
+                            <p>{timerDays}</p>
                             <p><small>Days</small></p> 
                         </section>
                         <span>:</span>
                         <section>
-                            <p>10</p>
+                            <p>{timerHours}</p>
                             <p><small>Hours</small></p> 
                         </section>
                         <span>:</span>
                         <section>
-                            <p>5</p>
+                            <p>{timerMinutes}</p>
                             <p><small>Minutes</small></p> 
                         </section>
                         <span>:</span>
                         <section>
-                            <p>2</p>
+                            <p>{timerSeconds}</p>
                             <p><small>Seconds</small></p> 
                         </section>
                     </div>
