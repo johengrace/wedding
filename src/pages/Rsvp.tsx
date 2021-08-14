@@ -4,6 +4,8 @@ import Tooltip from 'react-bootstrap/Tooltip'
 import axios from 'axios';
 import React from "react";
 import { MdHelp } from 'react-icons/md';
+import { ImSmile } from 'react-icons/im';
+import { scroller } from "react-scroll";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Radio from '@material-ui/core/Radio';
@@ -126,11 +128,13 @@ const Rsvp = () => {
         .then(response => {
             setFormSubmitted(true);
             setFormLoading(false);
+            scrollToRsvp();
         })
         .catch(error => {
             // CORS wont allow JS to inspect the headers. So just assume it succeed
             setFormSubmitted(true);
             setFormLoading(false);
+            scrollToRsvp();
         });
         
         event.preventDefault();
@@ -141,6 +145,14 @@ const Rsvp = () => {
         setFormValue({name: "", email: "", phone: "", attendance: "", vaccinated: "", messageForCouple: ""})
         setFormSubmitted(false)
         setFormLoading(false)
+        scrollToRsvp();
+    }
+
+    const scrollToRsvp = () => {
+        scroller.scrollTo('rsvp', {
+            offset: -30,
+            duration: 200,
+        });
     }
 
     const getRandomImage = () => {
@@ -174,7 +186,8 @@ const Rsvp = () => {
                 <div className={formSubmitted ? "" : "d-none"}>
                     <Row>
                         <FormLabel className="openSans mt-3 lh-lg text-center">
-                            Thank you for your RSVP! Your response has been recorded.
+                            Thank you for your RSVP! Your response has been recorded.<br/>
+                            Please check your email for confirmation from us <ImSmile/>
                         </FormLabel>
                     </Row>
                     <Row>
