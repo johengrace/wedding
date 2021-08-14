@@ -346,6 +346,11 @@
     color: #785e3a;
     border: 1px solid #c2b5a3;
     overflow: hidden;
+    cursor: pointer;
+}
+
+.galleryPage.firstPage, .galleryPage.lastPage {
+  cursor: auto;
 }
 
 .galleryPage.--right {
@@ -410,6 +415,13 @@
   padding:0;
 }
 
+.page-footer {
+    position: absolute;
+    right: 32px;
+    bottom: 20px;
+    color: rgba(120, 94, 58, 0.8);
+}
+
 .emptyImage {
   background: transparent;
   width: 15vw;
@@ -426,6 +438,10 @@
   .desktop.imgContainer {display: none;}
   .mobile.imgContainer {
     display: block;
+    background: url("assets/vertical1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .name {top: 90px;}
 

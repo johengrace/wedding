@@ -1,7 +1,7 @@
 import './App.css';
 import { hot } from 'react-hot-loader/root';
 import NavBar from './component/Navigation';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Switch, HashRouter  as Router } from 'react-router-dom';
 import Main from './pages/Main';
 import ScrollToTop from './component/ScrollToTop';
 import React from 'react';

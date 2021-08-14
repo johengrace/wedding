@@ -44,7 +44,7 @@ const Story = () => {
                     </p>
                 </TimelineContent>
                 <TimelineContent>
-                    <h3 className="vertical-timeline-element-title">2 Oct 2020</h3>
+                    <h3 className="vertical-timeline-element-title">2 Oct 2021</h3>
                     <h4 className="vertical-timeline-element-subtitle">We are Getting Married!</h4>
                 </TimelineContent>
                 <TimelineContent>
