@@ -438,6 +438,10 @@
   .desktop.imgContainer {display: none;}
   .mobile.imgContainer {
     display: block;
+    background: url("assets/vertical1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .name {top: 90px;}
 
