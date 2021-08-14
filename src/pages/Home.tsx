@@ -9,7 +9,7 @@ import useInterval from "../component/useInterval";
 import { Container, Row } from "react-bootstrap";
 
 let images: string[] = [cover1, cover2];
-let vImages: string[] = [vertical1];
+let vImages: string[] = [cover2, vertical1];
 const getRandomImage = () => {
     const displayedImg = images.shift()!;
     images = shuffle(images).concat([displayedImg]);
