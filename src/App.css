@@ -453,6 +453,12 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .mobile.imgContainer img {
+    object-fit: cover;
+    height: inherit !important;
+  }
+  
   .name {top: 90px;}
 
   .youtubeEmbed {

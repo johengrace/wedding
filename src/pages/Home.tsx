@@ -3,13 +3,14 @@ import React from "react";
 import cover1 from "../assets/cover1.jpg";
 import cover2 from "../assets/cover2.jpg";
 import vertical1 from "../assets/vertical1.jpg";
+import vertical2 from "../assets/DSC02306_compressed.jpg"
 import shuffle from "lodash/shuffle";
 import CrossFadeImage from "../component/CrossFadeImage";
 import useInterval from "../component/useInterval";
 import { Container, Row } from "react-bootstrap";
 
 let images: string[] = [cover1, cover2];
-let vImages: string[] = [cover2, vertical1];
+let vImages: string[] = [vertical1, vertical2];
 const getRandomImage = () => {
     const displayedImg = images.shift()!;
     images = shuffle(images).concat([displayedImg]);
