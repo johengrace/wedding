@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/wedding/static/css/main.ab7b4e1f.chunk.css",
-    "main.js": "/wedding/static/js/main.67d4613e.chunk.js",
-    "main.js.map": "/wedding/static/js/main.67d4613e.chunk.js.map",
-    "runtime-main.js": "/wedding/static/js/runtime-main.cba38fa8.js",
-    "runtime-main.js.map": "/wedding/static/js/runtime-main.cba38fa8.js.map",
+    "main.css": "/wedding/static/css/main.fabb4b8e.chunk.css",
+    "main.js": "/wedding/static/js/main.216a78d5.chunk.js",
+    "main.js.map": "/wedding/static/js/main.216a78d5.chunk.js.map",
+    "runtime-main.js": "/wedding/static/js/runtime-main.8ff36019.js",
+    "runtime-main.js.map": "/wedding/static/js/runtime-main.8ff36019.js.map",
     "static/css/2.ba8d14a3.chunk.css": "/wedding/static/css/2.ba8d14a3.chunk.css",
-    "static/js/2.f3bcacb3.chunk.js": "/wedding/static/js/2.f3bcacb3.chunk.js",
-    "static/js/2.f3bcacb3.chunk.js.map": "/wedding/static/js/2.f3bcacb3.chunk.js.map",
-    "static/js/3.82a96585.chunk.js": "/wedding/static/js/3.82a96585.chunk.js",
-    "static/js/3.82a96585.chunk.js.map": "/wedding/static/js/3.82a96585.chunk.js.map",
+    "static/js/2.c4b0bf51.chunk.js": "/wedding/static/js/2.c4b0bf51.chunk.js",
+    "static/js/2.c4b0bf51.chunk.js.map": "/wedding/static/js/2.c4b0bf51.chunk.js.map",
+    "static/js/3.ed7a5db7.chunk.js": "/wedding/static/js/3.ed7a5db7.chunk.js",
+    "static/js/3.ed7a5db7.chunk.js.map": "/wedding/static/js/3.ed7a5db7.chunk.js.map",
     "index.html": "/wedding/index.html",
     "static/css/2.ba8d14a3.chunk.css.map": "/wedding/static/css/2.ba8d14a3.chunk.css.map",
-    "static/css/main.ab7b4e1f.chunk.css.map": "/wedding/static/css/main.ab7b4e1f.chunk.css.map",
-    "static/js/2.f3bcacb3.chunk.js.LICENSE.txt": "/wedding/static/js/2.f3bcacb3.chunk.js.LICENSE.txt",
+    "static/css/main.fabb4b8e.chunk.css.map": "/wedding/static/css/main.fabb4b8e.chunk.css.map",
+    "static/js/2.c4b0bf51.chunk.js.LICENSE.txt": "/wedding/static/js/2.c4b0bf51.chunk.js.LICENSE.txt",
     "static/media/App.css": "/wedding/static/media/vertical1.5f949785.jpg",
     "static/media/DSC01317_compressed.8a0d54a4.jpg": "/wedding/static/media/DSC01317_compressed.8a0d54a4.jpg",
     "static/media/DSC01473_compressed.2794334b.jpg": "/wedding/static/media/DSC01473_compressed.2794334b.jpg",
@@ -29,10 +29,10 @@
     "static/media/cover2.e042f443.jpg": "/wedding/static/media/cover2.e042f443.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.cba38fa8.js",
+    "static/js/runtime-main.8ff36019.js",
     "static/css/2.ba8d14a3.chunk.css",
-    "static/js/2.f3bcacb3.chunk.js",
-    "static/css/main.ab7b4e1f.chunk.css",
-    "static/js/main.67d4613e.chunk.js"
+    "static/js/2.c4b0bf51.chunk.js",
+    "static/css/main.fabb4b8e.chunk.css",
+    "static/js/main.216a78d5.chunk.js"
   ]
 }
