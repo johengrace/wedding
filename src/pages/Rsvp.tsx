@@ -247,7 +247,7 @@ const Rsvp = () => {
                                     label="Not Attending" />
                             </RadioGroup>
                             <FormLabel className="openSans mt-3 lh-lg">
-                                <i>Please RSVP only for yourself. All +1s will be invited separately.</i>
+                                <i>Please RSVP only for yourself. All +1s (couple/kids) will be invited separately.</i>
                             </FormLabel>
                         </Form.Group>
                     </Row>

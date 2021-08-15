@@ -59,7 +59,9 @@ const WEvent = ({ rsvpFlag } : Props) => {
                             <div className="parents d-block d-sm-block d-md-block d-lg-none d-xl-none"></div> 
                             and Mrs. Minawati Yap
                         </p>
-                        <p className="mt-0 fs-5 fw-bold">Saturday, 2 October 2021 <br/>  Holy Matrimony at 10:30 | Bukit Batok Presbyterian Church </p>
+                        <p className="mt-0 fs-5 fw-bold">Saturday, 2 October 2021 
+                        <br/>  Holy Matrimony at 10:30 SGT | 09:30 WIB 
+                        <br/> Bukit Batok Presbyterian Church, Singapore</p>
                     </div>
                 </Col>
                 <Col lg={true} className="mt-5 mt-lg-0 justify-content-md-center">
