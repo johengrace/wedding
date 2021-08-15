@@ -206,7 +206,6 @@
 }
 
 
-
 @media only screen and (min-width: 1170px){
   .vertical-timeline--two-columns .vertical-timeline-element-icon {
     width: 40px !important;
@@ -459,7 +458,18 @@
     height: inherit !important;
   }
   
-  .name {top: 90px;}
+  .prename {
+    font-size: 4.5vw!important;
+  }
+
+  .name {
+    font-size: 8.6vw;;
+    top: 90px;
+  }
+
+  .weddingDate {
+    font-size: 4.0vw;
+  }
 
   .youtubeEmbed {
     height: 70vw;

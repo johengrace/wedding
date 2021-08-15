@@ -25,7 +25,7 @@ const Main = ({ rsvpFlag } : Props) => {
             animate={{ opacity: 1 }}
         >
             <Home/>
-            <WEvent/>
+            <WEvent rsvpFlag={rsvpFlag}/>
             <Story/>
             {rsvpFlag ? <Rsvp /> : <></>} 
             <Gallery/>

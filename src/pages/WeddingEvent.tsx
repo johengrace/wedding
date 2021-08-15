@@ -1,9 +1,16 @@
 import YoutubeEmbed from '../component/YoutubeEmbed';
 import { Button, Col, Row } from 'react-bootstrap';
-import { useEffect, useRef, useState } from 'react';
 import React from 'react';
+import { InferProps } from "prop-types";
+import { FiGift, FiMapPin, FiCalendar } from "react-icons/fi";
 
-const WEvent = <T extends any>(value: T) => {
+interface propTypes {
+    rsvpFlag: boolean;
+}
+
+type Props = InferProps<propTypes>;
+
+const WEvent = ({ rsvpFlag } : Props) => {
     const mapLink = "https://goo.gl/maps/6ZaL3fuevYXizWiH7";
     const calendarLink = "https://drive.google.com/uc?export=download&id=1GAuSbuyAqA1jJGzHSuVrYahPNj1nOrEP";
     const [timerDays, setTimerDays] = React.useState(0);
@@ -84,18 +91,38 @@ const WEvent = <T extends any>(value: T) => {
                         <Row>
                             <YoutubeEmbed/>
                         </Row>
+
+                        {rsvpFlag ? 
+                        <Row>
+                            <Col lg={4} className="mb-1 text-lg-end">
+                                <Button href={mapLink} target="_blank" variant="primary" className="eventButton mt-2">
+                                    <FiGift className="mb-1"/>&nbsp;E-Angbao
+                                </Button>
+                            </Col>
+                            <Col lg={4} className="mb-1 text-lg-center">
+                                <Button href={mapLink} target="_blank" variant="primary" className="eventButton mt-2">
+                                    <FiMapPin className="mb-1"/>&nbsp;How To Get There
+                                </Button>
+                            </Col>
+                            <Col lg={4} className="text-lg-start">
+                                <Button href={calendarLink} target="_blank" variant="primary" className="eventButton mt-2">
+                                    <FiCalendar className="mb-1"/>&nbsp;Add To Calendar
+                                </Button>
+                            </Col>
+                        </Row>
+                        :
                         <Row>
                             <Col lg={6} className="mb-1 text-lg-end">
                                 <Button href={mapLink} target="_blank" variant="primary" className="eventButton mt-2">
-                                    How To Get There
+                                    <FiGift className="mb-1"/>&nbsp;E-Angbao
                                 </Button>
                             </Col>
                             <Col lg={6} className="text-lg-start">
                                 <Button href={calendarLink} target="_blank" variant="primary" className="eventButton mx-lg-2 mt-2">
-                                    Add To Calendar
+                                    <FiCalendar className="mb-1"/>&nbsp;Add To Calendar
                                 </Button>
                             </Col>
-                        </Row>
+                        </Row>}
                     </div>
                 </Col>
         </Row>

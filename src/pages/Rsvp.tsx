@@ -19,7 +19,7 @@ import CrossFadeImage from '../component/CrossFadeImage';
 import useInterval from "../component/useInterval";
 import rsvpPhoto1 from "../assets/DSC01574_compressed.jpg"
 import rsvpPhoto2 from "../assets/DSC01317_compressed.jpg"
-import { shuffle, keys } from 'lodash';
+import { shuffle } from 'lodash';
 
 let images: string[] = [rsvpPhoto1, rsvpPhoto2]
 
