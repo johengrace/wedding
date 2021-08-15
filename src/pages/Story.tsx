@@ -16,7 +16,7 @@ const Story = () => {
         <Row>
         <div className="story">
             <VerticalTimeline>
-                <TimelineContent>
+                <TimelineContent className="firstStory">
                     <h3 className="vertical-timeline-element-title">Aug 2013</h3>
                     <img src={images[0]} className="our-story-img my-3 img-fluid" alt="Our Story"/>
                     <h4 className="vertical-timeline-element-subtitle">Our First Meeting</h4>
@@ -55,6 +55,7 @@ const Story = () => {
                 </TimelineContent>
                 <TimelineContent>
                     <h3 className="vertical-timeline-element-title">2 Oct 2021</h3>
+                    <img src={images[4]} className="our-story-img my-3 img-fluid" alt="Our Story"/>
                     <h4 className="vertical-timeline-element-subtitle">We are Getting Married!</h4>
                 </TimelineContent>
                 <TimelineContent>
