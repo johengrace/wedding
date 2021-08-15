@@ -88,8 +88,7 @@ const CrossFadeImage = (props: ImageProps) => {
                         opacity: bottomOpacity + "%",
                         transition: `opacity ${transitionDuration}s ${curve}`,
                         left:"0px",
-                        width:"100%",
-                        height:"auto",
+                        width:"100%"
                     }}
                     src={bottomSrc}
                     alt={alt}

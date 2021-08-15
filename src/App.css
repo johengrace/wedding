@@ -205,6 +205,8 @@
     margin-top: 2.5em !important;
 }
 
+
+
 @media only screen and (min-width: 1170px){
   .vertical-timeline--two-columns .vertical-timeline-element-icon {
     width: 40px !important;
@@ -219,6 +221,14 @@
     font-weight: bold;
   }
 
+  .vertical-timeline-element {
+    margin-top: -14em!important;
+  }
+  
+  .vertical-timeline-element.firstStory {
+    margin-top: 0px!important;
+  }
+  
   .rsvp {
     min-height: 100vh;
   }
@@ -443,6 +453,12 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .mobile.imgContainer img {
+    object-fit: cover;
+    height: inherit !important;
+  }
+  
   .name {top: 90px;}
 
   .youtubeEmbed {

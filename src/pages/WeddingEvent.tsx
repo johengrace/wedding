@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import React from 'react';
 
 const WEvent = <T extends any>(value: T) => {
+    const mapLink = "https://goo.gl/maps/6ZaL3fuevYXizWiH7";
+    const calendarLink = "https://drive.google.com/uc?export=download&id=1GAuSbuyAqA1jJGzHSuVrYahPNj1nOrEP";
     const [timerDays, setTimerDays] = React.useState(0);
     const [timerHours, setTimerHours] = React.useState(0);
     const [timerMinutes, setTimerMinutes] = React.useState(0);
@@ -33,8 +35,6 @@ const WEvent = <T extends any>(value: T) => {
         }
     });
 
-
-
     return(
         <Row className="weddingEvent">
                 <Col lg={true} className="invitation mt-5 mt-lg-0 px-4 px-lg-0">
@@ -52,7 +52,7 @@ const WEvent = <T extends any>(value: T) => {
                             <div className="parents d-block d-sm-block d-md-block d-lg-none d-xl-none"></div> 
                             and Mrs. Minawati Yap
                         </p>
-                        <p className="mt-0 fs-5 fw-bold">Saturday, 2 October 2021 <br/>  Holy Matrimony at 10am | Bukit Batok Presbyterian Church </p>
+                        <p className="mt-0 fs-5 fw-bold">Saturday, 2 October 2021 <br/>  Holy Matrimony at 10:30 | Bukit Batok Presbyterian Church </p>
                     </div>
                 </Col>
                 <Col lg={true} className="mt-5 mt-lg-0 justify-content-md-center">
@@ -84,14 +84,14 @@ const WEvent = <T extends any>(value: T) => {
                         <Row>
                             <YoutubeEmbed/>
                         </Row>
-                        <Row className="mt-2">
-                            <Col lg={6} className="mb-1">
-                                <Button variant="primary" className="eventButton">
-                                    Download Booklet
+                        <Row>
+                            <Col lg={6} className="mb-1 text-lg-end">
+                                <Button href={mapLink} target="_blank" variant="primary" className="eventButton mt-2">
+                                    How To Get There
                                 </Button>
                             </Col>
-                            <Col lg={6}>
-                                <Button variant="primary" className="eventButton">
+                            <Col lg={6} className="text-lg-start">
+                                <Button href={calendarLink} target="_blank" variant="primary" className="eventButton mx-lg-2 mt-2">
                                     Add To Calendar
                                 </Button>
                             </Col>
