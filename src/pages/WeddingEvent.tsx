@@ -42,7 +42,7 @@ const WEvent = <T extends any>(value: T) => {
                         <p className="lh-sm fs-5">By the grace of God, <br/> We cordially invite you to join us in our Holy Matrimony</p>
                         <p className="invitationName my-0 ">Joshua Hendinata</p>
                         <p className="lh-sm fs-5">
-                            Son of Mr. Hadi Sucianto&nbsp;
+                            Son of Mr. Josephus Hadi Sucianto&nbsp;
                             <div className="parents d-block d-sm-block d-md-block d-lg-none d-xl-none"></div> 
                             and Mrs. Erviany</p>
                         <p className="my-0">&</p>
@@ -85,7 +85,7 @@ const WEvent = <T extends any>(value: T) => {
                             <YoutubeEmbed/>
                         </Row>
                         <Row className="mt-2">
-                            <Col lg={6}>
+                            <Col lg={6} className="mb-1">
                                 <Button variant="primary" className="eventButton">
                                     Download Booklet
                                 </Button>

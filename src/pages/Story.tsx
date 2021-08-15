@@ -54,8 +54,7 @@ const Story = () => {
                     </p>
                 </TimelineContent>
                 <TimelineContent>
-                    <h3 className="vertical-timeline-element-title">2 Oct 2020</h3>
-                    <img src={images[4]} className="our-story-img my-3 img-fluid" alt="Our Story"/>
+                    <h3 className="vertical-timeline-element-title">2 Oct 2021</h3>
                     <h4 className="vertical-timeline-element-subtitle">We are Getting Married!</h4>
                 </TimelineContent>
                 <TimelineContent>

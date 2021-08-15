@@ -7,9 +7,10 @@ import img1 from "../assets/DSC01550_compressed_square.jpg"
 
 const Page = React.forwardRef((props, ref) => {
     return (
-        <div className="galleryPage" ref={ref} data-density="hard">
+        <div className={"galleryPage " + props.className} ref={ref} data-density="hard">
             <div className="page-content">
                 <div className="page-image">{props.children}</div>
+                <div className="page-footer">{props.number}</div>
             </div>
         </div>
     );
@@ -41,7 +42,7 @@ const Gallery = () => {
                     ref={(el) => (flipBook = el)}
                 >
 
-                    <Page number={1}>
+                    <Page number={1} className="firstPage">
                         <img 
                         className="galleryBg" 
                         src="https://i.pinimg.com/originals/93/10/30/931030519d5dacba7f810e6ae40d3ea9.png"/>
@@ -69,19 +70,19 @@ const Gallery = () => {
                         src="https://i.pinimg.com/originals/93/10/30/931030519d5dacba7f810e6ae40d3ea9.png"/>
                         <ul>
                             <li><img src={img1} /></li>
-                            <li><img src={img1} /></li>
-                            <li><img src={img1} /></li>
+                            <li><div className="emptyImage"/></li>
+                            <li><div className="emptyImage"/></li>
                             <li><img src={img1} /></li>
                         </ul>
                     </Page>
-                    <Page number={4}>
+                    <Page number={4} className="lastPage">
                         <img 
                         className="galleryBg2" 
                         src="https://i.pinimg.com/originals/93/10/30/931030519d5dacba7f810e6ae40d3ea9.png"/>
                         <ul>
                             <li><img src={img1} /></li>
-                            <li><img src={img1} /></li>
-                            <li><img src={img1} /></li>
+                            <li><div className="emptyImage"/></li>
+                            <li><div className="emptyImage"/></li>
                             <li><img src={img1} /></li>
                         </ul>
                     </Page>
