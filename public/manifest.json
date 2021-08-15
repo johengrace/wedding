@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Joshua & Grace Wedding",
+  "name": "Joshua & Grace Wedding Invitation",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,8 +8,8 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
+      "src": "logo192.jpg",
+      "type": "image/jpg",
       "sizes": "192x192"
     },
     {
