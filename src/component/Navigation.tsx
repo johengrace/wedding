@@ -84,6 +84,15 @@ const NavBar = ({ rsvpFlag } : Props) => {
                             Our Story
                         </Nav.Link>
                         <Nav.Link 
+                        className="mx-2 navBarButton"
+                        eventKey="gallery"
+                        onSelect={() => scroller.scrollTo('gallery', {
+                            offset: -30,
+                            duration: 200,
+                        })}>
+                            Gallery
+                        </Nav.Link>
+                        <Nav.Link 
                         className="navbar-right mx-2 rsvpNavButton btn btn-outline-primary btn-sm"
                         eventKey="rsvp"
                         onClick={() => {
