@@ -16,7 +16,7 @@ type Props = InferProps<propTypes>;
 
 const WEvent = ({ rsvpFlag } : Props) => {
     const mapLink = "https://goo.gl/maps/6ZaL3fuevYXizWiH7";
-    const calendarLink = "https://drive.google.com/uc?export=download&id=1GAuSbuyAqA1jJGzHSuVrYahPNj1nOrEP";
+    const calendarLink = "https://drive.google.com/uc?export=download&id=1tyBskip6VKlnUFbUTVAECW-Yv_c9LwY5";
     const [timerDays, setTimerDays] = React.useState(0);
     const [timerHours, setTimerHours] = React.useState(0);
     const [timerMinutes, setTimerMinutes] = React.useState(0);
