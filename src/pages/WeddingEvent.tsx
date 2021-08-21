@@ -27,7 +27,7 @@ const WEvent = ({ rsvpFlag } : Props) => {
     const handleClose = () => setShowModal(false);
 
     var sgBankNumber = "120-390450-0";
-    var idBankNumber = "123-123-123";
+    var idBankNumber = "0561346240";
 
     React.useEffect(() => {
         let interval = setInterval (() => {
@@ -110,7 +110,11 @@ const WEvent = ({ rsvpFlag } : Props) => {
                         {rsvpFlag ? 
                         <Row>
                             <Col lg={4} className="mb-1 text-lg-end">
-                                <Button href={mapLink} target="_blank" variant="primary" className="eventButton mt-2">
+                                <Button 
+                                target="_blank" 
+                                variant="primary" 
+                                className="eventButton mt-2"
+                                onClick={() => setShowModal(true)}>
                                     <FiGift className="mb-1"/>&nbsp;E-Angbao
                                 </Button>
                             </Col>
