@@ -3,6 +3,10 @@ import { Button, Col, Row } from 'react-bootstrap';
 import React from 'react';
 import { InferProps } from "prop-types";
 import { FiGift, FiMapPin, FiCalendar } from "react-icons/fi";
+import Modal from 'react-bootstrap/Modal';
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
+import qrcode from '../assets/qrcode.jpg';
 
 interface propTypes {
     rsvpFlag: boolean;
@@ -18,6 +22,12 @@ const WEvent = ({ rsvpFlag } : Props) => {
     const [timerMinutes, setTimerMinutes] = React.useState(0);
     const [timerSeconds, setTimerSeconds] = React.useState(0);
     const countdownDate = new Date('October 2, 2021 02:30:00').getTime();
+
+    const [showModal, setShowModal] = React.useState(false);
+    const handleClose = () => setShowModal(false);
+
+    var sgBankNumber = "120-390450-0";
+    var idBankNumber = "123-123-123";
 
     React.useEffect(() => {
         let interval = setInterval (() => {
@@ -43,6 +53,7 @@ const WEvent = ({ rsvpFlag } : Props) => {
     });
 
     return(
+        <>
         <Row className="weddingEvent">
             <div className="weddingEventBackground">
             </div>
@@ -117,7 +128,12 @@ const WEvent = ({ rsvpFlag } : Props) => {
                         :
                         <Row>
                             <Col lg={6} className="mb-1 text-lg-end">
-                                <Button href={mapLink} target="_blank" variant="primary" className="eventButton mt-2">
+                                <Button 
+                                target="_blank" 
+                                variant="primary" 
+                                className="eventButton mt-2"
+                                onClick={() => setShowModal(true)}
+                                >
                                     <FiGift className="mb-1"/>&nbsp;E-Angbao
                                 </Button>
                             </Col>
@@ -131,6 +147,65 @@ const WEvent = ({ rsvpFlag } : Props) => {
                 </Col>
         </Row>
 
+        <Modal show={showModal}>
+        <Modal.Body>
+            <Tabs defaultActiveKey="english" className="mb-3">
+                <Tab eventKey="english" title="Singapore">
+                    <div className="text-center">
+                        <p className="openSans mt-3 lh-lg">For Singapore Bank Account:
+                        To bless the couple with e-angbao, please scan the QR Code or transfer via bank account number below.
+                        Thank you for your generosity.</p>
+                        <img src={qrcode} className= "qrCode img-fluid"></img>
+                        <p className="openSans">Joshua Hendinata 
+                            <br/> DBS {sgBankNumber}
+                            <br/><br/> <i>Kindly input your name into the reference/description</i>
+                        </p>
+                        <Button 
+                            target="_blank" 
+                            variant="primary"
+                            className="eventButton mx-auto"
+                            onClick={() => {navigator.clipboard.writeText(sgBankNumber.replace(/-/g, ""))}}
+                        >
+                            Copy Bank Account Number
+                        </Button>
+                    </div>
+                   
+                </Tab>
+                <Tab eventKey="indonesia" title="Indonesia">
+                    <div className="text-center">
+                    <p className="openSans mt-3 lh-lg">
+                        Untuk memberkati mempelai, 
+                        e-angbao bisa ditransfer ke: 
+                        <br/>
+                        <br/>
+
+                        <h4>
+                            {idBankNumber}
+                            <br/>
+                            BCA a/n Grace Christina
+                        </h4>
+                        <br/>
+                        Terima kasih untuk dukungan dan doa anda.
+                    </p>
+                    <Button 
+                        target="_blank" 
+                        variant="primary"
+                        className="eventButton mx-auto"
+                        onClick={() => {navigator.clipboard.writeText(idBankNumber.replace(/-/g, ""))}}
+                    >
+                        Copy Nomer Rekening
+                    </Button>       
+                    </div>
+                </Tab>
+            </Tabs>
+        </Modal.Body>
+        <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+                Close
+            </Button>
+        </Modal.Footer>
+        </Modal>
+        </>
     )
 }
 
