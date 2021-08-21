@@ -426,18 +426,11 @@
 .galleryPage li:nth-child(2){
     /* transform:rotate(6deg); */
     margin: 0 12px;
-    background: transparent;
-    border:0px;
-    box-shadow:0px;
 }
 
 .galleryPage li:nth-child(3){
     /* transform:rotate(2deg);  */
-    margin: 0px 40px 0px 0px;
     margin: 0 15px;
-    background: transparent;
-    border:0px;
-    box-shadow:0px;
 }
 
 .galleryPage li:nth-child(4){
@@ -463,6 +456,11 @@
 }
 
 .emptyImage {
+  background: transparent !important;
+  border:0px !important;
+}
+
+.emptyImage div{
   background: transparent;
   width: 15vw;
 }
@@ -478,7 +476,7 @@
   .desktop.imgContainer {display: none;}
   .mobile.imgContainer {
     display: block;
-    background: url("assets/vertical1.jpg");
+    background: url("assets/main/DSC01523-4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -521,21 +519,15 @@
   }
 
   .galleryPage li:nth-child(1){
-      /* transform:rotate(-10deg); */
       margin: 0px 0px 30px 0px;
   }
 
-  .galleryPage li:nth-child(2){
-      /* transform:rotate(6deg); */
-  }
-
   .galleryPage li:nth-child(3){
-      /* transform:rotate(2deg); */
       margin: 0px 0px 0px 0px;
   }
 
   .galleryPage li:nth-child(4){
-      /* transform:rotate(-8deg); */
+      margin: 0px 0px 0px 148px;
   }
 }
 

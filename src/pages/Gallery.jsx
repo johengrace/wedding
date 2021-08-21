@@ -2,7 +2,9 @@ import HTMLFlipBook from "react-pageflip";
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { InferProps } from "prop-types";
-import img1 from "../assets/DSC01550_compressed_square.jpg"
+import { LazyLoadImage, trackWindowScroll  } from 'react-lazy-load-image-component';
+import * as galleryImg from '../component/GalleryPhotos'
+import pageDecor from '../assets/gallery/pageDecor.png'
 
 
 const Page = React.forwardRef((props, ref) => {
@@ -16,7 +18,7 @@ const Page = React.forwardRef((props, ref) => {
     );
 });
 
-const Gallery = () => {
+const Gallery = ({ scrollPosition }) => {
     const [page, setPage] = React.useState(0);
     const [totalPage, setTotalPage] = React.useState(0);
     let flipBook = null
@@ -43,47 +45,111 @@ const Gallery = () => {
                 >
 
                     <Page number={1} className="firstPage">
-                        <img 
-                        className="galleryBg" 
-                        src="https://i.pinimg.com/originals/93/10/30/931030519d5dacba7f810e6ae40d3ea9.png"/>
+                        <img className="galleryBg" src={pageDecor}/>
+                        <img className="galleryBg2" src={pageDecor}/>
                         <ul>
-                            <li><img src={img1} /></li>
-                            <li><div className="emptyImage"/></li>
-                            <li><div className="emptyImage"/></li>
-                            <li><img src={img1} /></li>
+                            <li>
+                                <LazyLoadImage
+                                scrollPosition={scrollPosition}
+                                src={galleryImg.dsc01481img}/>
+                            </li>
+                            <li className="emptyImage"><div/></li>
+                            <li className="emptyImage"><div/></li>
+                            <li>
+                                <LazyLoadImage
+                                scrollPosition={scrollPosition}
+                                src={galleryImg.dsc01723img}/>
+                            </li>
                         </ul>
                     </Page>
-                    <Page number={2}>
-                        <img 
-                        className="galleryBg2" 
-                        src="https://i.pinimg.com/originals/93/10/30/931030519d5dacba7f810e6ae40d3ea9.png"/>
+                    <Page number={2} className="secondPage">
+                        <img className="galleryBg" src={pageDecor}/>
+                        <img className="galleryBg2" src={pageDecor}/>
                         <ul>
-                            <li><img src={img1} /></li>
-                            <li><div className="emptyImage"/></li>
-                            <li><div className="emptyImage"/></li>
-                            <li><img src={img1} /></li>
+                            <li>
+                                <LazyLoadImage
+                                scrollPosition={scrollPosition}
+                                src={galleryImg.dsc02178img}/>
+                            </li>
+                            <li className="emptyImage"><div/></li>
+                            <li className="emptyImage"><div/></li>
+                            <li>
+                                <LazyLoadImage
+                                scrollPosition={scrollPosition}
+                                src={galleryImg.dsc02077img}/>
+                            </li>
                         </ul>
                     </Page>
                     <Page number={3}>
-                        <img 
-                        className="galleryBg" 
-                        src="https://i.pinimg.com/originals/93/10/30/931030519d5dacba7f810e6ae40d3ea9.png"/>
+                        <img className="galleryBg" src={pageDecor}/>
+                        <img className="galleryBg2" src={pageDecor}/>
                         <ul>
-                            <li><img src={img1} /></li>
-                            <li><div className="emptyImage"/></li>
-                            <li><div className="emptyImage"/></li>
-                            <li><img src={img1} /></li>
+                            <li>
+                                <LazyLoadImage
+                                scrollPosition={scrollPosition}
+                                src={galleryImg.dsc01550img}/>
+                            </li>
+                            <li className="emptyImage"><div/></li>
+                            <li className="emptyImage"><div/></li>
+                            <li>
+                                <LazyLoadImage
+                                scrollPosition={scrollPosition}
+                                src={galleryImg.dsc02142img}/>
+                            </li>
                         </ul>
                     </Page>
                     <Page number={4} className="lastPage">
-                        <img 
-                        className="galleryBg2" 
-                        src="https://i.pinimg.com/originals/93/10/30/931030519d5dacba7f810e6ae40d3ea9.png"/>
+                        <img className="galleryBg" src={pageDecor}/>
+                        <img className="galleryBg2" src={pageDecor}/>
                         <ul>
-                            <li><img src={img1} /></li>
-                            <li><div className="emptyImage"/></li>
-                            <li><div className="emptyImage"/></li>
-                            <li><img src={img1} /></li>
+                            <li>
+                                <LazyLoadImage
+                                scrollPosition={scrollPosition}
+                                src={galleryImg.dsc02180img}/>
+                            </li>
+                            <li className="emptyImage"><div/></li>
+                            <li className="emptyImage"><div/></li>
+                            <li>
+                                <LazyLoadImage
+                                scrollPosition={scrollPosition}
+                                src={galleryImg.dsc02053img}/>
+                            </li>
+                        </ul>
+                    </Page>
+                    <Page number={5}>
+                        <img className="galleryBg" src={pageDecor}/>
+                        <img className="galleryBg2" src={pageDecor}/>
+                        <ul>
+                            <li>
+                                <LazyLoadImage
+                                scrollPosition={scrollPosition}
+                                src={galleryImg.dsc02224img}/>
+                            </li>
+                            <li className="emptyImage"><div/></li>
+                            <li className="emptyImage"><div/></li>
+                            <li>
+                                <LazyLoadImage
+                                scrollPosition={scrollPosition}
+                                src={galleryImg.dsc02318img}/>
+                            </li>
+                        </ul>
+                    </Page>
+                    <Page number={6} className="lastPage">
+                        <img className="galleryBg" src={pageDecor}/>
+                        <img className="galleryBg2" src={pageDecor}/>
+                        <ul>
+                            <li>
+                                <LazyLoadImage
+                                scrollPosition={scrollPosition}
+                                src={galleryImg.dsc02193img}/>
+                            </li>
+                            <li className="emptyImage"><div/></li>
+                            <li className="emptyImage"><div/></li>
+                            <li>
+                                <LazyLoadImage
+                                scrollPosition={scrollPosition}
+                                src={galleryImg.dsc02195img}/>
+                            </li>
                         </ul>
                     </Page>
 
@@ -92,4 +158,4 @@ const Gallery = () => {
     )
 }
 
-export default Gallery;
+export default trackWindowScroll(Gallery);
