@@ -200,7 +200,7 @@ const WEvent = ({ rsvpFlag } : Props) => {
             </Tabs>
         </Modal.Body>
         <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="primary" className="eventButton" onClick={handleClose}>
                 Close
             </Button>
         </Modal.Footer>
