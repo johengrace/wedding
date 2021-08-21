@@ -44,7 +44,9 @@ const WEvent = ({ rsvpFlag } : Props) => {
 
     return(
         <Row className="weddingEvent">
-                <Col lg={true} className="invitation mt-5 mt-lg-0 px-4 px-lg-0">
+            <div className="weddingEventBackground">
+            </div>
+                <Col lg={true} className="invitation mt-5 mt-lg-0 px-4 px-lg-0 eventContent">
                     <div>
                         <p className="lh-sm fs-5">By the grace of God, <br/> We cordially invite you to join us in our Holy Matrimony</p>
                         <p className="invitationName my-0 ">Joshua Hendinata</p>
@@ -64,7 +66,7 @@ const WEvent = ({ rsvpFlag } : Props) => {
                         <br/> Bukit Batok Presbyterian Church, Singapore</p>
                     </div>
                 </Col>
-                <Col lg={true} className="mt-5 mt-lg-0 justify-content-md-center">
+                <Col lg={true} className="mt-5 mt-lg-0 justify-content-md-center eventContent">
                     <div className="mx-1">
                         <div className="countdown-container">
                             <section>

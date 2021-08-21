@@ -122,15 +122,32 @@
   height: 100%;
   /* width: 100%; */
   display: flex;
+  position: relative;
   flex-direction: inherit;
   align-items: center;
   align-content: center;
   justify-content: center;
   background-color: white;
-  /* background-image: url("../src/assets/leaves1.jpg"); */
   background-size:cover;
   background-repeat: no-repeat;
   background: rgb(223,238,245); 
+}
+
+.weddingEventBackground{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  /* background-color: blue; */
+  background-image: url("../src/assets/watercolor1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+}
+
+.eventContent {
+  z-index: 2;
 }
 
 @media only screen and (min-width: 992px){
@@ -190,6 +207,7 @@
 .story {
   width: 100%;
   height: 100%;
+  position: relative;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   display: flex;
@@ -198,6 +216,19 @@
   justify-content: center;
   background: rgb(242,224,220);
   background: linear-gradient(0deg, rgba(242,224,220,1) 0%, rgba(223,238,245,1) 30%);
+}
+
+
+.storyBackground{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  /* background-color: blue; */
+  background-image: url("../src/assets/watercolor1.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
 }
 
 .vertical-timeline {
@@ -456,6 +487,10 @@
   .mobile.imgContainer img {
     object-fit: cover;
     height: inherit !important;
+  }
+
+  .weddingEventBackground {
+    background-size: cover;
   }
   
   .prename {

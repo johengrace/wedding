@@ -15,6 +15,8 @@ const Story = () => {
     return(
         <Row>
         <div className="story">
+            <div className="storyBackground">
+            </div>
             <VerticalTimeline>
                 <TimelineContent className="firstStory">
                     <h3 className="vertical-timeline-element-title">Aug 2013</h3>
