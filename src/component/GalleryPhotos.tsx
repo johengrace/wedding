@@ -1,0 +1,25 @@
+import dsc01481 from "../assets/gallery/DSC01481_compressed_squared.jpg";
+import dsc01550 from "../assets/gallery/DSC01550_compressed_squared.jpg";
+import dsc01723 from "../assets/gallery/DSC01723_compressed_squared.jpg";
+import dsc02053 from "../assets/gallery/DSC02053_compressed_squared.jpg";
+import dsc02077 from "../assets/gallery/DSC02077_compressed_squared.jpg";
+import dsc02142 from "../assets/gallery/DSC02142_compressed_squared.jpg";
+import dsc02178 from "../assets/gallery/DSC02178_compressed_squared.jpg";
+import dsc02180 from "../assets/gallery/DSC02180_compressed_squared.jpg";
+import dsc02193 from "../assets/gallery/DSC02193_compressed_squared.jpg";
+import dsc02195 from "../assets/gallery/DSC02195_compressed_squared.jpg";
+import dsc02224 from "../assets/gallery/DSC02224_compressed_squared.jpg";
+import dsc02318 from "../assets/gallery/DSC02318_compressed_squared.jpg";
+
+export const dsc01481img = dsc01481;
+export const dsc01550img = dsc01550;
+export const dsc01723img = dsc01723;
+export const dsc02053img = dsc02053;
+export const dsc02077img = dsc02077;
+export const dsc02142img = dsc02142;
+export const dsc02178img = dsc02178;
+export const dsc02180img = dsc02180;
+export const dsc02193img = dsc02193;
+export const dsc02195img = dsc02195;
+export const dsc02224img = dsc02224;
+export const dsc02318img = dsc02318;

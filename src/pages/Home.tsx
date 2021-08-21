@@ -1,25 +1,26 @@
 import { motion } from "framer-motion";
 import React from "react";
-import cover1 from "../assets/cover1.jpg";
-import cover2 from "../assets/cover2.jpg";
-import vertical1 from "../assets/vertical1.jpg";
-import vertical2 from "../assets/DSC02306_compressed.jpg"
-import shuffle from "lodash/shuffle";
+import cover1 from "../assets/main/DSC01523-4.jpg";
+import cover2 from "../assets/main/DSC01665-4.jpg";
+import cover3 from "../assets/main/DSC01705-4.jpg";
+import vertical1 from "../assets/main/DSC01532-4.jpg";
+import vertical2 from "../assets/main/DSC01535-4.jpg";
+import vertical3 from "../assets/main/DSC02306.jpg";
 import CrossFadeImage from "../component/CrossFadeImage";
 import useInterval from "../component/useInterval";
 import { Container, Row } from "react-bootstrap";
 
-let images: string[] = [cover1, cover2];
-let vImages: string[] = [vertical1, vertical2];
+let images: string[] = [cover1, cover2, cover3];
+let vImages: string[] = [vertical1, vertical2, vertical3];
 const getRandomImage = () => {
     const displayedImg = images.shift()!;
-    images = shuffle(images).concat([displayedImg]);
+    images = images.concat([displayedImg]);
     return images[0];
 };
 
 const getRandomVImage = () => {
     const displayedImg = vImages.shift()!;
-    vImages = shuffle(vImages).concat([displayedImg]);
+    vImages = vImages.concat([displayedImg]);
     return vImages[0];
 };
 
