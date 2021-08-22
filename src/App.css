@@ -439,6 +439,7 @@
 
 .galleryPage li:nth-child(4){
      transform:rotate(8deg); 
+     margin-top: -80px;
 }
 
 .galleryPage li img {
@@ -523,7 +524,7 @@
   }
 
   .galleryPage li:nth-child(1){
-      margin: 0px 0px 30px 0px;
+      margin: 0px 0px 30px 30px;
   }
 
   .galleryPage li:nth-child(3){
@@ -531,15 +532,21 @@
   }
 
   .galleryPage li:nth-child(4){
-      margin: 0px 0px 0px 148px;
+      margin: -30px 0px 0px 0px;
   }
 }
 
 
 @media all and (max-width: 649px) {
   .galleryPage li img {
-    width: 35vw;
-    margin-bottom: 3em;
+    width: 50vw;
+    margin-bottom: 2em;
+  }
+
+  
+  .galleryPage li{
+    border:solid 9px #fff;
+    box-shadow:0 0 6px 0px #555;
   }
 }
 
