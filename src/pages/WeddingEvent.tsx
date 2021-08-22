@@ -115,7 +115,7 @@ const WEvent = ({ rsvpFlag } : Props) => {
                                 variant="primary" 
                                 className="eventButton mt-2"
                                 onClick={() => setShowModal(true)}>
-                                    <FiGift className="mb-1"/>&nbsp;E-Angbao
+                                    <FiGift className="mb-1"/>&nbsp;E-Gift
                                 </Button>
                             </Col>
                             <Col lg={4} className="mb-1 text-lg-center">
@@ -138,7 +138,7 @@ const WEvent = ({ rsvpFlag } : Props) => {
                                 className="eventButton mt-2"
                                 onClick={() => setShowModal(true)}
                                 >
-                                    <FiGift className="mb-1"/>&nbsp;E-Angbao
+                                    <FiGift className="mb-1"/>&nbsp;E-Gift
                                 </Button>
                             </Col>
                             <Col lg={6} className="text-lg-start">
@@ -157,7 +157,7 @@ const WEvent = ({ rsvpFlag } : Props) => {
                 <Tab eventKey="english" title="Singapore">
                     <div className="text-center">
                         <p className="openSans mt-3 lh-lg">For Singapore Bank Account:
-                        To bless the couple with e-angbao, please scan the QR Code or transfer via bank account number below.
+                        To bless the couple with e-gift, please scan the QR Code or transfer via bank account number below.
                         Thank you for your generosity.</p>
                         <img src={qrcode} className= "qrCode img-fluid"></img>
                         <p className="openSans">Joshua Hendinata 
@@ -179,7 +179,7 @@ const WEvent = ({ rsvpFlag } : Props) => {
                     <div className="text-center">
                     <p className="openSans mt-3 lh-lg">
                         Untuk memberkati mempelai, 
-                        e-angbao bisa ditransfer ke: 
+                        e-gift bisa ditransfer ke: 
                         <br/>
                         <br/>
 
