@@ -10,7 +10,7 @@ import CrossFadeImage from "../component/CrossFadeImage";
 import useInterval from "../component/useInterval";
 import { Container, Row } from "react-bootstrap";
 
-let images: string[] = [cover1, cover2];
+let images: string[] = [cover1, cover2, cover3];
 let vImages: string[] = [vertical1, vertical2, vertical3];
 const getRandomImage = () => {
     const displayedImg = images.shift()!;

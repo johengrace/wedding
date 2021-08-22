@@ -24,8 +24,8 @@ const Story = () => {
                     <h4 className="vertical-timeline-element-subtitle">Our First Meeting</h4>
                     <p>
                         We met in Nanyang Technological University and became friends.
-                        <br/> Grace: Nothing happened though
-                        <br/> Joshua: Well, a little spark was there, I promise.
+                        <br/> Grace: "Nothing happened though"
+                        <br/> Joshua: "Well, a little spark was there, I promise."
                     </p>
                 </TimelineContent>
                 <TimelineContent>
