@@ -2,7 +2,6 @@ import HTMLFlipBook from "react-pageflip";
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { InferProps } from "prop-types";
-import { LazyLoadImage, trackWindowScroll  } from 'react-lazy-load-image-component';
 import * as galleryImg from '../component/GalleryPhotos'
 import pageDecor from '../assets/gallery/pageDecor.png'
 
@@ -18,17 +17,40 @@ const Page = React.forwardRef((props, ref) => {
     );
 });
 
-const Gallery = ({ scrollPosition }) => {
+const Gallery = () => {
     const [page, setPage] = React.useState(0);
     const [totalPage, setTotalPage] = React.useState(0);
-    let flipBook = null
+    const [imageLoaded, setImageLoaded] = React.useState(false);
+    const galleryRow = React.useRef();
+    
+    let flipBook = null;
+    let pageOffsetTop = null;
 
     const onPage = (e) => {
         setPage(e.data);
     };
 
+    const attachScrollListener = () => {
+        pageOffsetTop = document.addEventListener("scroll", e => {
+            console.log(galleryRow.current)
+        })
+    }
+
+    React.useEffect(() => {
+        pageOffsetTop = document.addEventListener("scroll", e => {
+            if (galleryRow.current.getBoundingClientRect().top <= 1500) {
+                if (!imageLoaded){
+                    setImageLoaded(true)
+                }
+            }
+        })
+        return () => {
+            document.removeEventListener("scroll", pageOffsetTop)
+        }
+    }, [])
+
     return(
-        <Row className="gallery overflow-hidden">
+        <Row className="gallery overflow-hidden" ref={galleryRow}>
                 <HTMLFlipBook
                     width={500}
                     height={800}
@@ -48,108 +70,60 @@ const Gallery = ({ scrollPosition }) => {
                         <img className="galleryBg" src={pageDecor}/>
                         <img className="galleryBg2" src={pageDecor}/>
                         <ul>
-                            <li>
-                                <LazyLoadImage
-                                scrollPosition={scrollPosition}
-                                src={galleryImg.dsc01481img}/>
-                            </li>
+                            <li>{imageLoaded ? <img src={galleryImg.dsc01481img}/> : <></> }</li>
                             <li className="emptyImage"><div/></li>
                             <li className="emptyImage"><div/></li>
-                            <li>
-                                <LazyLoadImage
-                                scrollPosition={scrollPosition}
-                                src={galleryImg.dsc01723img}/>
-                            </li>
+                            <li>{imageLoaded ? <img src={galleryImg.dsc01723img}/> : <></> }</li>
                         </ul>
                     </Page>
                     <Page number={2} className="secondPage">
                         <img className="galleryBg" src={pageDecor}/>
                         <img className="galleryBg2" src={pageDecor}/>
                         <ul>
-                            <li>
-                                <LazyLoadImage
-                                scrollPosition={scrollPosition}
-                                src={galleryImg.dsc02178img}/>
-                            </li>
+                            <li>{imageLoaded ? <img src={galleryImg.dsc02178img}/> : <></> }</li>
                             <li className="emptyImage"><div/></li>
                             <li className="emptyImage"><div/></li>
-                            <li>
-                                <LazyLoadImage
-                                scrollPosition={scrollPosition}
-                                src={galleryImg.dsc02077img}/>
-                            </li>
+                            <li>{imageLoaded ? <img src={galleryImg.dsc02077img}/> : <></> }</li>
                         </ul>
                     </Page>
                     <Page number={3}>
                         <img className="galleryBg" src={pageDecor}/>
                         <img className="galleryBg2" src={pageDecor}/>
                         <ul>
-                            <li>
-                                <LazyLoadImage
-                                scrollPosition={scrollPosition}
-                                src={galleryImg.dsc01550img}/>
-                            </li>
+                            <li>{imageLoaded ? <img src={galleryImg.dsc01550img}/> : <></> }</li>
                             <li className="emptyImage"><div/></li>
                             <li className="emptyImage"><div/></li>
-                            <li>
-                                <LazyLoadImage
-                                scrollPosition={scrollPosition}
-                                src={galleryImg.dsc02142img}/>
-                            </li>
+                            <li>{imageLoaded ? <img src={galleryImg.dsc02142img}/> : <></> }</li>
                         </ul>
                     </Page>
                     <Page number={4} className="lastPage">
                         <img className="galleryBg" src={pageDecor}/>
                         <img className="galleryBg2" src={pageDecor}/>
                         <ul>
-                            <li>
-                                <LazyLoadImage
-                                scrollPosition={scrollPosition}
-                                src={galleryImg.dsc02180img}/>
-                            </li>
+                            <li>{imageLoaded ? <img src={galleryImg.dsc02180img}/> : <></> }</li>
                             <li className="emptyImage"><div/></li>
                             <li className="emptyImage"><div/></li>
-                            <li>
-                                <LazyLoadImage
-                                scrollPosition={scrollPosition}
-                                src={galleryImg.dsc02053img}/>
-                            </li>
+                            <li>{imageLoaded ? <img src={galleryImg.dsc02053img}/> : <></> }</li>
                         </ul>
                     </Page>
                     <Page number={5}>
                         <img className="galleryBg" src={pageDecor}/>
                         <img className="galleryBg2" src={pageDecor}/>
                         <ul>
-                            <li>
-                                <LazyLoadImage
-                                scrollPosition={scrollPosition}
-                                src={galleryImg.dsc02224img}/>
-                            </li>
+                            <li>{imageLoaded ? <img src={galleryImg.dsc02224img}/> : <></> }</li>
                             <li className="emptyImage"><div/></li>
                             <li className="emptyImage"><div/></li>
-                            <li>
-                                <LazyLoadImage
-                                scrollPosition={scrollPosition}
-                                src={galleryImg.dsc02318img}/>
-                            </li>
+                            <li>{imageLoaded ? <img src={galleryImg.dsc02318img}/> : <></> }</li>
                         </ul>
                     </Page>
                     <Page number={6} className="lastPage">
                         <img className="galleryBg" src={pageDecor}/>
                         <img className="galleryBg2" src={pageDecor}/>
                         <ul>
-                            <li>
-                                <LazyLoadImage
-                                scrollPosition={scrollPosition}
-                                src={galleryImg.dsc02193img}/>
-                            </li>
+                            <li>{imageLoaded ? <img src={galleryImg.dsc02193img}/> : <></> }</li>
                             <li className="emptyImage"><div/></li>
                             <li className="emptyImage"><div/></li>
-                            <li>
-                                <LazyLoadImage
-                                scrollPosition={scrollPosition}
-                                src={galleryImg.dsc02195img}/>
-                            </li>
+                            <li>{imageLoaded ? <img src={galleryImg.dsc02195img}/> : <></> }</li>
                         </ul>
                     </Page>
 
@@ -158,4 +132,4 @@ const Gallery = ({ scrollPosition }) => {
     )
 }
 
-export default trackWindowScroll(Gallery);
+export default Gallery;
