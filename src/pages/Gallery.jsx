@@ -76,7 +76,7 @@ const Gallery = () => {
                             <li>{imageLoaded ? <img src={galleryImg.dsc01723img}/> : <></> }</li>
                         </ul>
                     </Page>
-                    <Page number={2} className="secondPage">
+                    <Page number={2}>
                         <img className="galleryBg" src={pageDecor}/>
                         <img className="galleryBg2" src={pageDecor}/>
                         <ul>
@@ -96,7 +96,7 @@ const Gallery = () => {
                             <li>{imageLoaded ? <img src={galleryImg.dsc02142img}/> : <></> }</li>
                         </ul>
                     </Page>
-                    <Page number={4} className="lastPage">
+                    <Page number={4}>
                         <img className="galleryBg" src={pageDecor}/>
                         <img className="galleryBg2" src={pageDecor}/>
                         <ul>
