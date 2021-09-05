@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/wedding/static/css/main.52c69529.chunk.css",
-    "main.js": "/wedding/static/js/main.bea638ef.chunk.js",
-    "main.js.map": "/wedding/static/js/main.bea638ef.chunk.js.map",
+    "main.css": "/wedding/static/css/main.f3dcb50e.chunk.css",
+    "main.js": "/wedding/static/js/main.d7d8026c.chunk.js",
+    "main.js.map": "/wedding/static/js/main.d7d8026c.chunk.js.map",
     "runtime-main.js": "/wedding/static/js/runtime-main.c2bf41b2.js",
     "runtime-main.js.map": "/wedding/static/js/runtime-main.c2bf41b2.js.map",
     "static/css/2.ba8d14a3.chunk.css": "/wedding/static/css/2.ba8d14a3.chunk.css",
-    "static/js/2.39b76812.chunk.js": "/wedding/static/js/2.39b76812.chunk.js",
-    "static/js/2.39b76812.chunk.js.map": "/wedding/static/js/2.39b76812.chunk.js.map",
+    "static/js/2.21f10456.chunk.js": "/wedding/static/js/2.21f10456.chunk.js",
+    "static/js/2.21f10456.chunk.js.map": "/wedding/static/js/2.21f10456.chunk.js.map",
     "static/js/3.a3900045.chunk.js": "/wedding/static/js/3.a3900045.chunk.js",
     "static/js/3.a3900045.chunk.js.map": "/wedding/static/js/3.a3900045.chunk.js.map",
     "index.html": "/wedding/index.html",
     "static/css/2.ba8d14a3.chunk.css.map": "/wedding/static/css/2.ba8d14a3.chunk.css.map",
-    "static/css/main.52c69529.chunk.css.map": "/wedding/static/css/main.52c69529.chunk.css.map",
-    "static/js/2.39b76812.chunk.js.LICENSE.txt": "/wedding/static/js/2.39b76812.chunk.js.LICENSE.txt",
+    "static/css/main.f3dcb50e.chunk.css.map": "/wedding/static/css/main.f3dcb50e.chunk.css.map",
+    "static/js/2.21f10456.chunk.js.LICENSE.txt": "/wedding/static/js/2.21f10456.chunk.js.LICENSE.txt",
     "static/media/App.css": "/wedding/static/media/watercolor1.96d36999.png",
     "static/media/DSC01317_compressed.8a0d54a4.jpg": "/wedding/static/media/DSC01317_compressed.8a0d54a4.jpg",
     "static/media/DSC01473_compressed.2794334b.jpg": "/wedding/static/media/DSC01473_compressed.2794334b.jpg",
@@ -46,8 +46,8 @@
   "entrypoints": [
     "static/js/runtime-main.c2bf41b2.js",
     "static/css/2.ba8d14a3.chunk.css",
-    "static/js/2.39b76812.chunk.js",
-    "static/css/main.52c69529.chunk.css",
-    "static/js/main.bea638ef.chunk.js"
+    "static/js/2.21f10456.chunk.js",
+    "static/css/main.f3dcb50e.chunk.css",
+    "static/js/main.d7d8026c.chunk.js"
   ]
 }
