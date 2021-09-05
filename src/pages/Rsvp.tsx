@@ -231,7 +231,7 @@ const Rsvp = () => {
                     </Row> 
                     <Row>
                         <Form.Group as={Col} xs={12} >
-                            <FormLabel component="legend" className="openSans lh-lg">Will you attend our wedding onsite? <b>Kindly RSVP by 5 Sep 2021</b></FormLabel>
+                            <FormLabel component="legend" className="openSans lh-lg">Will you attend our wedding onsite? <b>Kindly RSVP by 12 Sep 2021</b></FormLabel>
                             <RadioGroup aria-label="attendance" name="attendance" >
                                 <RadioTextRsvp 
                                     value="Attending" 
