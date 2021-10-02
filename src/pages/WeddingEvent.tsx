@@ -21,7 +21,7 @@ const WEvent = ({ rsvpFlag } : Props) => {
     const [timerHours, setTimerHours] = React.useState(0);
     const [timerMinutes, setTimerMinutes] = React.useState(0);
     const [timerSeconds, setTimerSeconds] = React.useState(0);
-    const countdownDate = new Date('2021-10-02 10:30:00+08:00').getTime();
+    const countdownDate = new Date(1633141800000).getTime(); // 2021-10-02 10:30:00+08:00
 
     const [showModal, setShowModal] = React.useState(false);
     const handleClose = () => setShowModal(false);
